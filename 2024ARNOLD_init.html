@@ -1,3 +1,28 @@
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 35,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
 campaignTrail_temp.election_json = [
     {
         "model": "campaign_trail.election",
@@ -28,7 +53,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Republican",
             "state": "South Carolina",
             "priority": 1,
-            "description": "<p>George W. Bush enters 2000 with the support of the Republican establishment and the name recognition of his father. He has governed Texas for five years and won bipartisan support in that state. He seeks to duplicate that formula on the national stage.</p><p>Bush has broad appeal and a united base, but lacks experience and gravitas in the eyes of some. Can he make the case that he will move beyond the partisanship of the Clinton years and bring \"compassionate conservatism\" to the nation?</p>",
+            "description": "<i>Conservatives have a different view of a lot of issues versus our friends on the other side. The election determines how that shakes out.</i><p>Was there really any doubt that he'd come out the victor of the Republican primaries? Lindsey Graham is the incumbent Vice President under President Schwarzenegger. The friend of the late John McCain, he enjoys a lot of support among moderate Republicans and is President Schwarzenegger's hand-picked successor despite losing some popularity recently. He has worked in a  bipartisan manner throughout his entire career, working with Democrats on many issues, while facing a lot of criticism from the Tea Party and MAGA movements. Graham will need to be prepared for yet another challenge to his right, and he starts out as the underdog. Will he be able to replicate the Presidator's successes? Or will Elon Musk's third-party campaign be too much to bear?</p>",
             "color_hex": "#ff2e2e",
             "secondary_color_hex": "#FFA0A0",
             "is_active": 1,
@@ -51,7 +76,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Democrat",
             "state": "Kentucky",
             "priority": 2,
-            "description": "<p>Al Gore enters the 2000 election as the Democratic candidate after eight years as Vice President under Bill Clinton.</p><p>Gore has a lot of options in his campaign. He can embrace the legacy of Clinton, for better or worse. Politically, he can run as a centrist, or move to the left and run as a more traditional liberal Democrat than Clinton did. The presence of the well-known Ralph Nader as a Green Party candidate complicates this decision. Gore is essentially campaigning on two fronts.</p>",
+            "description": "<i>My guiding principle has always been that we do better when we respect one another.</i><p>After leaving the Governor's Mansion in Frankfort, Kentucky to run in a once-again large and divisive primary, Andy Beshear has taken the Democratic nomination for the 2024 presidential election. The son of former Democratic Kentucky Governor Steve Beshear, he is an interesting figure, and a popular one. Defeating the unpopular incumbent Governor Matt Bevin in deep-red Kentucky in 2019, he has had widespread popularity there. He is a foil to President Arnold Schwarzenegger in some ways, in that he is a centrist for his party and is a Democratic governor from a red state. Kentucky is unlikely to vote blue, but his moderate positions can be crucial to win the Midwest and Southeast, where third-parties have played spoiler in the era of Arnold Schwarzenegger. However, discontent with the war in Gaza has triggered a third-party campaign from Jill Stein, which could hurt among progressives.</p>",
             "color_hex": "#3d3dff",
             "secondary_color_hex": "#90C0FF",
             "is_active": 1,
@@ -97,7 +122,7 @@ campaignTrail_temp.candidate_json = [
             "party": "America First",
             "state": "Texas",
             "priority": 4,
-            "description": "''",
+            "description": "<i>Some people don't like change, but you need to embrace change if the alternative is disaster.</i><p>When Donald Trump was disqualified from the race on May 30, 2024 due to his felony convictions, it was clear who he wanted to endorse to continue the MAGA movement. He chose nobody other than the world-renown Elon Musk. He is the CEO of Tesla and SpaceX, and the owner of X (formerly Twitter). Musk is the second presidential candidate to test the 28th Amendment, after the current President, as he was born in South Africa. Elon Musk is expected to continue Donald Trump's Make America Great Again movement after being a strong supporter of him since his third-party candidacy in 2020. While he's not expected to win the election by any means, he can do a lot of damage to Graham's campaign like Trump and Huckabee attempted to do the last two times. But he could also bring some young tech gurus and the \"bro vote\" into his campaign as well.</p>",
             "color_hex": "#ea47ff",
             "secondary_color_hex": "#FFFFC0",
             "is_active": 1,
@@ -124,11 +149,11 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#FF0000",
             "secondary_color_hex": "#FFA0A0",
             "is_active": 0,
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sen._Martha_McSally_official_Senate_headshot_116th_congress.jpg",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sen._Martha_McSally_official_Senate_headshot_116th_congress.jpg/330px-Sen._Martha_McSally_official_Senate_headshot_116th_congress.jpg",
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Dick Cheney is a seasoned operative of the Republican Party who has served as White House Chief of Staff, Minority Whip in Congress, Secretary of Defense, and as CEO of Halliburton. He would be a respected choice across the Republican spectrum, and would add experience and gravitas to the Republican ticket.</p>",
+            "description_as_running_mate": "<i>Growing up, I was told I could be anything I wanted to be. There were no limitations restraining me just because I was a girl. Then I joined the military.</i><p>Martha McSally is like you in a lot of ways. She started out fairly moderate in the House before pivoting to the right in recent years. She was also appointed to your friend John McCain's seat after he died and then Jon Kyl resigned. She isn't the most popular of all time since she nearly lost her Senate race in 2022, but she is more popular among MAGA supporters. She can help unite the Republican Party on an issue where you've been very moderate. Not to mention, like you, she is an Air Force veteran and the first American woman to fly in combat, before earning the rank of colonel. Furthermore, her home state of Arizona has gotten bluer in recent years and she could help keep it red. McSally would also be the first female Vice President, but some fear she is too close to Sarah Palin for their liking.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -151,7 +176,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>John Danforth served four terms as Senator from Missouri. He has broad experience in government, and as a moderate Republican would reinforce Bush's claim to be a uniter. Danforth also has close relationships with conservative stalwarts such as Kit Bond, Clarence Thomas, and John Ashcroft, and would not arouse undue suspicion from the conservative wing of the party. Winning Missouri back would be a key piece of any Republican victory in 2000.</p>",
+            "description_as_running_mate": "<i>Immigration is a sensitive topic.</i><p>Mario Diaz-Balart has lived the American Dream. Born to Cuban immigrant parents, he has served in the House of Representatives since 2003 in the more conservative Cuban-majority areas of Miami. He has worked in a largely bipartisan manner and was a staunch ally of you and President Schwarzenegger. Like you, he has made immigration reform a priority. Diaz-Balart checks off a lot of boxes for your campaign. Not only is he a staunch ally of the Schwarzenegger administration, but he is also a Cuban and is widely popular in the critical swing state of Florida. He also upholds your pledges to promote diversity in the Republican Party and continue the legacy of the Schwarzenegger administration. Some may say though that he may not do enough to appease the MAGA wing of the Republican Party.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -174,7 +199,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Tom Ridge is the popular Governor of a large swing state. Pennsylvania's 23 electoral votes would almost ensure a Bush victory if Ridge could deliver them. He has a reputation as an able administrator and has been very tough on crime. However, he has also been pro-choice for his entire career, and his selection as running mate could cause issues with the Republican base in other regions.</p>",
+            "description_as_running_mate": "<i>I think the Hispanic community, the values that resonate in our community, are fundamentally conservative. They are faith, family, patriotism.</i><p>Ted Cruz was one of Arnold Schwarzenegger's biggest rivals in the 2016 Republican primaries, right behind Donald Trump. As a two-term Senator from Texas, Ted Cruz has been very critical of the Schwarzenegger administration when it comes to many social issues; he even endorsed Huckabee in 2016. Nevertheless, he could help keep Trump supporters and the Christian Right in line this year. Texas wasn't expected to be too competitive this year unless Elon Musk took a lot of votes away, but Cruz would help there nonetheless despite his modest unpopularity in his home state. He would also uphold your pledge of having diversity in the party, but some may say that this selection could be a pander to the Christian right and MAGA.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -197,7 +222,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Colin Powell is a moderate Republican and a key general from the Desert Storm campaign. He enjoys high personal popularity among the American electorate. He would be the first African-American to be a running mate for a major party. It will take some strong inducements to get Powell to run, however. He has repeatedly stated that he is not seeking the role, but perhaps you could persuade him by taking a moderate position on the social issues of the day.</p>",
+            "description_as_running_mate": "<i>Based on what our country stands for. We can't fail to stand for democracy.</i><p>Kelly Ayotte would be a very interesting choice this year. She is a conservative Northeastern Republican woman and has served in the Senate for two terms in New Hampshire before narrowly losing to Colin Van Ostern in 2022. She is still a popular figure among moderates, and can help in her battleground home state this year. She is also a strong fiscal conservative, which could unite the Republican Party on economic issues outside of protectionism. Kelly Ayotte was a staunch ally of the Schwarzenegger administration in the Senate, and would be the first female Vice President of the United States if elected. There would be a lot of backlash from social conservatives and MAGA supporters, giving Musk a lot of ammunition. But as long as you can replicate you and Arnie's victories, it won't matter in the end.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -220,7 +245,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Joe Lieberman is a moderate Democrat and Orthodox Jew who has served as a Senator from Connecticut. He would be the first Jewish candidate or running mate from a major party. He was also a prominent critic of Bill Clinton's missteps during his time in the White House. Geographically, Lieberman could help with Gore's vote total in the critical state of Florida.</p>",
+            "description_as_running_mate": "<i>The American Dream I believe in is one that provides anyone willing to work hard enough with the opportunity to succeed.</i><p>Tammy Duckworth has made many sacrifices for the country she loves dearly. Born as an American citizen in Bangkok, Thailand, she joined the Army as a helicopter pilot. She lost both legs below the knee when her helicopter was hit by a grenade during the Iraq War in 2004. She would later enter Congress representing suburban Chicago, and later defeated incumbent Senator Mark Kirk in Illinois in 2016. Tammy Duckworth has became an advocate for veterans, immigration reform, and women's rights in the House and Senate. Her backstory can really appeal to many demographics and groups of people, especially in her home region of the Midwest and Illinois. Duckworth would also be the first female Vice President of the United States, as well as the first Asian to serve as Vice President.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -243,7 +268,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Bob Graham is a Senator and former Governor from Florida. His popularity in that state could be crucial to a Democratic victory in 2000. He is fairly moderate and was one of Bill Clinton's top choices for running mate before Clinton went with Gore. His focus has been on the environment, education, and intelligence issues.</p>",
+            "description_as_running_mate": "<i>People want leaders they can look up to, who can solve problems and actually deliver results for our people.</i><p>As the Governor of the state of Michigan, one that has been reliably blue but contested by Republicans over the last thirty years, Whitmer was your biggest rival in the 2024 Democratic primaries. She is tough as nails, and is a strong advocate for workers' rights and reproductive rights. She even faced a kidnapping plot by a far-right militia group over her response to the COVID-19 pandemic right before the 2020 presidential election. Whitmer enjoys immense popularity in Michigan and the rest of the critical Midwest, and among working-class, suburban, and female voters. Choosing your top primary rival is expected to help unite the party after such a divisive primary, and bring suburban women into the Democratic ticket for 2024.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -266,7 +291,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>John Kerry is a Senator from Massachusetts. He gained prominence in his youth as a Vietnam Veteran Against the War. He also won a Silver Star in that war. He is a solid liberal on the political spectrum. His home state is strongly Democratic, but his views may help the Democrats reduce the loss of support to Ralph Nader. He can also be helpful in New Hampshire.</p>",
+            "description_as_running_mate": "<i>When you're accustomed to privilege, parity and equity and equality may feel like oppression.</i><p>Now it was quite a miracle this guy got in the Senate, alright. But Reverend Raphael Warnock became quite popular among black and suburban voters in the left-trending, usually red state of Georgia, and won his Senate race in 2022 rather comfortably. He shares a lot of similarities with Barack Obama, with his experience in the Senate and his charisma. He would be the first African-American Vice President of the United States. He is also the senior pastor at Ebenezer Baptist Church in Atlanta, the same church that Martin Luther King Jr was a pastor. If Warnock can energize African-Americans like he did in his Senate races, he can score crucial wins for your ticket in the four Southeastern states that nearly went blue due to Republican vote splitting the last two times: Virginia, North Carolina, his home state of Georgia, and the all-important battleground of Florida.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -289,7 +314,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Evan Bayh is a Senator from Indiana and a former Governor. He is broadly popular in that state and is a leader of the moderate wing of the Democrats. This could help the Democrats compete in the Midwest and South, but it could also alienate the left-wing of the party and drive additional support to Ralph Nader's bid.</p>",
+            "description_as_running_mate": "<i>Our families don't always cross the finish line in the span of one generation. But each generation passes on to the next the fruits of their labor.</i><p>Julian Castro doesn't have a whole lot of major experience, other than serving as Mayor of San Antonio, Texas and later as Secretary of Housing and Urban Development during the Obama administration. Castro was a rival of yours in the 2024 primaries as well. But there's no denying that he has lived the American Dream. He keeps his mother's story as a political activist in his mind throughout his career and his life. If elected, he would be the highest ranking Latino to ever serve in the United States government. Texas is very likely to vote Republican this year, once again, but he can help in many key battleground states across the Sun Belt, including Nevada, Colorado, New Mexico, and the all-important state of Florida by energizing Latino voters and telling his compelling story.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -312,7 +337,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "''",
             "electoral_loss_message": "''",
             "no_electoral_majority_message": "''",
-            "description_as_running_mate": "<p>Winona LaDuke is a Native American activist of Ojibwe ancestry. She lives in Minnesota and has been active in attempts to regain land that once belonged to various American Indian tribes. She has written a book and started organizations in support of this issue.</p>",
+            "description_as_running_mate": "<i>This may sound trite, but I believe it to be true: Entrepreneurship is the fabric of what America is all about.</i><p>Vivek Ramaswamy is a rising star in the MAGA movement. He is an entrepreneur just like you, founding Roivant Sciences in 2014 and is a child of immigrants from India. He did run in the 2024 Republican primaries, mostly standing up against the \"identity crisis\" when it comes to climate change, gender ideology, and COVID-19. He just embodies the anti-establishment movement that has been going on since Donald Trump entered the political world in 2015. He puts America First, he has been a strong critic of the Schwarzenegger administration on social issues and COVID mandates, and is a multimillionaire tech guru that can help you double down on appealing to upper-class businessmen and tech gurus across the country.</p>",
             "candidate_score": 0,
             "running_mate": true
         }
@@ -324,7 +349,7 @@ campaignTrail_temp.candidate_json = [
             "first_name": "Robert F.",
             "last_name": "Kennedy Jr.",
             "election": 9,
-            "party": "Independent",
+            "party": "We The People",
             "state": "California",
             "priority": 1,
             "description": "<p>Put description here</p>",
@@ -335,7 +360,7 @@ campaignTrail_temp.candidate_json = [
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": null,
+            "description_as_running_mate": "<i>I'm comfortable reading science and dissecting it and discerning the difference between junk science and real science.</i><p>This is not the Robert Kennedy that we all know and we all admire, that's for damn sure. RFK Jr does enjoy a lot of support among all kinds of political spectrums, and almost seems like a perfect anti-establishment, independent-minded running-mate for your 2024 campaign. He has a strong environmentalist background, but he is also known for saying some relatively outlandish things. He also promotes conspiracy theories about vaccines causing autism, and that's not mentioning some of the other things he has said. But there just might be people that see his last name and want to support him. After all, he is the nephew of a martyred President and the son of another martyred Democratic figure. In terms of your campaign, Kennedy can help appeal to disaffected Democrats and independents.</p>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -347,18 +372,18 @@ campaignTrail_temp.candidate_json = [
             "first_name": "Tulsi",
             "last_name": "Gabbard",
             "election": 9,
-            "party": "Democrat",
+            "party": "Independent",
             "state": "Hawaii",
             "priority": 1,
             "description": "<p>Put description here</p>",
-            "color_hex": "#0000FF",
+            "color_hex": "#8c8c8c",
             "secondary_color_hex": null,
             "is_active": 0,
             "image_url": "https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-n37930u0pfsd1.png?width=330&format=png&auto=webp&s=9c92cc32a3eeb6de820a46371ba70278adcefe2d",
             "electoral_victory_message": "This guy wins!",
             "electoral_loss_message": "This guy loses!",
             "no_electoral_majority_message": "We all win?",
-            "description_as_running_mate": null,
+            "description_as_running_mate": "<i>Sadly, the system in this country is rigged in favor of wealthy elites who have purchased tremendous influence in our government.</i><p>Tulsi Gabbard did not leave the Democratic Party. The Democratic Party left her. After running in the Democratic primaries this year and losing, she decided she'd had enough of it. Born in American Samoa, Tulsi Gabbard served in Iraq and Kuwait before entering Congress representing Hawaii as a strong Bernie-esque progressive Democrat. She resigned in 2021 to serve a deployment to the Horn of Africa where she was promoted to lieutenant colonel. She had an awakening after her loss in the Democratic primaries and left the party after she pivoted to the right on many social issues and she got tired of the wars around the world. Tulsi Gabbard can help appeal to disaffected Democrats, Bernie or Bust voters, as well as the MAGA movement.</p> ",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -456,32 +481,7 @@ campaignTrail_temp.running_mate_json = [
     }
 ]
 
-campaignTrail_temp.credits = "Dan Bryan"
-
-campaignTrail_temp.global_parameter_json = [
-    {
-        "model": "campaign_trail.global_parameter",
-        "pk": 1,
-        "fields": {
-            "vote_variable": 1.125,
-            "max_swing": 0.12,
-            "start_point": 0.94,
-            "candidate_issue_weight": 10,
-            "running_mate_issue_weight": 3,
-            "issue_stance_1_max": -0.71,
-            "issue_stance_2_max": -0.3,
-            "issue_stance_3_max": -0.125,
-            "issue_stance_4_max": 0.125,
-            "issue_stance_5_max": 0.3,
-            "issue_stance_6_max": 0.71,
-            "global_variance": 0.01,
-            "state_variance": 0.005,
-            "question_count": 35,
-            "default_map_color_hex": "#C9C9C9",
-            "no_state_map_color_hex": "#999999"
-        }
-    }
-]
+campaignTrail_temp.credits = "Environmental_Cap104"
 
 campaignTrail_temp.opponents_default_json = [
     {
@@ -524,11 +524,13 @@ jet_data = {
     "bannerImageUrl": "https://i.imgur.com/H96bRhl.png",
     "backgroundImageUrl": "https://nursingeducation.org/wp-content/uploads/2023/07/kentucky.jpg",
     "endingTextColor": "#000000",
-    "customQuote": ""
+    "customQuote": "\"Hasta la vista, baby!\" - Arnold Schwarzenegger"
 }
 
 //#startcode
 
+
+corrr = '\n              <h2>THE CAMPAIGN TRAIL</h2><font id="wittyquote" size="4" color="white"><em>"Hasta la vista, baby!" - Arnold Schwarzenegger</em></font>\n            ';
 
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#1a0160";

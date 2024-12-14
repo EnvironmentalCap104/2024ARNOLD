@@ -28773,3 +28773,44 @@ campaignTrail_temp.jet_data = [{
 }
 ]
 
+campaignTrail_temp.cyoa = true
+cyoAdventure = function (a) {
+    ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
+    if (e.question_number == 5) {
+        window.setTimeout(e.vpSwitcher, 20)
+      } 
+    if(ans == 3333){
+        campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/bScR258.png';
+        campaignTrail_temp.running_mate_image_url = "https://media.istockphoto.com/id/1473288294/vector/republican-party-logo-vector-illustration.jpg?s=612x612&w=0&k=20&c=opeyFAindWxFHUcToydIo3sq3uLJQliQ55NhudenESs="
+        campaignTrail_temp.candidate_last_name = 'Graham';
+        campaignTrail_temp.running_mate_last_name = "2024"
+    }     
+    if(ans == 3334){
+        campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/bScR258.png';
+        campaignTrail_temp.running_mate_image_url = "https://media.istockphoto.com/id/1473288294/vector/republican-party-logo-vector-illustration.jpg?s=612x612&w=0&k=20&c=opeyFAindWxFHUcToydIo3sq3uLJQliQ55NhudenESs="
+        campaignTrail_temp.candidate_last_name = 'Graham';
+        campaignTrail_temp.running_mate_last_name = "2024"
+    }  
+    if(ans == 3335){
+        campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/bScR258.png';
+        campaignTrail_temp.running_mate_image_url = "https://media.istockphoto.com/id/1473288294/vector/republican-party-logo-vector-illustration.jpg?s=612x612&w=0&k=20&c=opeyFAindWxFHUcToydIo3sq3uLJQliQ55NhudenESs="
+        campaignTrail_temp.candidate_last_name = 'Graham';
+        campaignTrail_temp.running_mate_last_name = "2024"
+    } 
+    if(ans == 3322){
+        campaignTrail_temp.candidate_json[0]["fields"].first_name = "Josh";
+        campaignTrail_temp.candidate_last_name = 'Hawley';
+        campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/6tEoAVG.png';
+        campaignTrail_temp.candidate_json[0]["fields"].last_name = "Hawley";
+        campaignTrail_temp.candidate_json[0]["fields"].image_url = "https://i.imgur.com/6tEoAVG.png;
+campaignTrail_temp.running_mate_state_id = '189';
+campaignTrail_temp.running_mate_image_url = 'https://dronelife.com/wp-content/uploads/2024/11/512px-Donald_Trump_Jr._53808883476_cropped.jpg';
+campaignTrail_temp.running_mate_last_name = 'Trump Jr';
+
+        campaignTrail_temp.candidate_json[0]["fields"].electoral_victory_message = "<h3>Bill Clinton has won the 1992 election.</h3><p>After you dropped out, the primary became a bitter fight between California Governor Jerry Brown and Arkansas Governor Bill Clinton. The relatively unknown, youthful Bill Clinton became the party nominee for the Democrats in 1992. His third-way Democratic policy ideas seemed to resonate with enough voters to hand him the presidency, on top of Ross Perot's candidacy and the unpopularity of President George H.W. Bush. </p>";
+        campaignTrail_temp.candidate_json[0]["fields"].electoral_loss_message = "<h3>Bill Clinton has lost the 1992 election.</h3><p>After you dropped out, the primary became a bitter fight between California Governor Jerry Brown and Arkansas Governor Bill Clinton. The relatively unknown, youthful Bill Clinton became the party nominee for the Democrats in 1992. He wasn't able to hand the Democrats the White House in 1992, which is likely due to some baggage he had, as well as his relative unfamiliarity with the general public outside of Arkansas. Therefore, President George H.W. Bush has been re-elected to another four year term, giving the Republican Party sixteen straight years of White House control. </p>";
+  campaignTrail_temp.multiple_endings=false
+         campaignTrail_temp.question_number = 34;
+}
+}
+    

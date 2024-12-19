@@ -202,7 +202,7 @@ campaignTrail_temp.questions_json = [
         "pk": 389,
         "fields": {
             "priority": 3,
-            "description": "Some suggest you lack the experience and qualifications for to be President. What do you say?",
+            "description": "Especially after the <i>Dobbs v. Jackson</i> case in 2022, evangelical, pro-life Republicans have fought long and hard to overturn Roe v. Wade and end the practice of abortion in the United States once and for all. However, it hasn't come easy. Abortion rights are extremely popular in the United States, but it is also an issue that Republicans absolutely have to agree on. What is your position on abortion rights?",
             "likelihood": 1
         }
     },
@@ -256,7 +256,7 @@ campaignTrail_temp.questions_json = [
         "pk": 12243,
         "fields": {
             "priority": 0,
-            "description": "put description here",
+            "description": "There are a lot of Republicans concerned about your choice of Martha McSally as your running-mate. There are concerns that she is too close to Sarah Palin from the ill-fated McCain campaign in 2008 for their liking. How will you reaffirm that Martha McSally is the right pick this year?",
             "likelihood": 1
         }
     },
@@ -850,7 +850,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3481,
         "fields": {
             "question": 389,
-            "description": "This is nonsense. I have served as the Governor of Texas, the second largest state in the country, for nearly six years."
+            "description": "I believe that the Supreme Court made the wrong decision on June 24, 2022. I believe that abortion should be brought back to the states, where the people can decide. Every state should decide if abortion is legal and on what terms."
         }
     },
     {
@@ -858,7 +858,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3482,
         "fields": {
             "question": 389,
-            "description": "I plead guilty. I don't have experience with the broken political culture of Washington, unlike my opponent. I will clean this system up when I am President."
+            "description": "While I do have my strong opposition to the practice of abortion, I believed that <i>Roe v. Wade</i> has been settled precedent, and I don't think it is necessary to overturn it without a good reason. The Supreme Court did make the right decision on June 24, 2022."
         }
     },
     {
@@ -866,7 +866,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3483,
         "fields": {
             "question": 389,
-            "description": "James Buchanan had a lot of experience in government. Abraham Lincoln didn't. So what if I'm a little unseasoned? I have the instincts for the job."
+            "description": "I believe that we should put our ideological differences and our religious beliefs aside. The government is not supposed to be in our bedrooms and our doctor's offices. The decision to have an abortion should be made between a woman, her doctor, and her family. Not the government."
         }
     },
     {
@@ -938,7 +938,7 @@ campaignTrail_temp.answers_json = [
         "pk": 12256,
         "fields": {
             "question": 12243,
-            "description": "put description here"
+            "description": "Donald and Elon have so much sway in the GOP, and I simply can't afford to lose those voters like Arnie and I almost did in 2016 and 2020. She is more on the conservative side, but Martha McSally is a true patriot, a veteran, and affirms my promise of promoting more gender diversity in the party."
         }
     },
     {
@@ -1051,6 +1051,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 12248,
             "description": "I've always seen Donald Trump as a crazy person, but I've never thought his movement would come to this. Why the hell are we talking about eating pets, calling Puerto Rico a trashy place, and for god's sake, why can't we stop talking about the 2020 election? I call for everyone in America to not just vote for the candidate, but vote your values. I may not be conservative enough for some Republicans, but I don't go out talking about minorities and our democracy like that."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 12403,
+        "fields": {
+            "question": 12243,
+            "description": "The border and cultural issues are very important this year, and they are important for Senator McSally. We need the old Trump voters on our side if we want to win in 2024."
         }
     }
 ]
@@ -6710,7 +6718,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3483,
             "candidate": 77,
             "affected_candidate": 77,
-            "global_multiplier": -0.002
+            "global_multiplier": -0.015
         }
     },
     {
@@ -7702,6 +7710,76 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 79,
             "global_multiplier": -0.15
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12405,
+        "fields": {
+            "answer": 12256,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12409,
+        "fields": {
+            "answer": 12403,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12410,
+        "fields": {
+            "answer": 12403,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12414,
+        "fields": {
+            "answer": 3481,
+            "candidate": 77,
+            "affected_candidate": 77,
+            "global_multiplier": -0.01
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12415,
+        "fields": {
+            "answer": 3481,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": -0.05
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12416,
+        "fields": {
+            "answer": 3483,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12418,
+        "fields": {
+            "answer": 3482,
+            "candidate": 77,
+            "affected_candidate": 79,
+            "global_multiplier": 0.05
+        }
     }
 ]
 
@@ -8354,6 +8432,76 @@ campaignTrail_temp.answer_score_issue_json = [
             "issue": 31,
             "issue_score": -0.65,
             "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12406,
+        "fields": {
+            "answer": 12256,
+            "issue": 29,
+            "issue_score": -0.5,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12407,
+        "fields": {
+            "answer": 12256,
+            "issue": 31,
+            "issue_score": -0.6,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12411,
+        "fields": {
+            "answer": 12403,
+            "issue": 29,
+            "issue_score": -0.65,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12412,
+        "fields": {
+            "answer": 12403,
+            "issue": 31,
+            "issue_score": -0.75,
+            "issue_importance": 5
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12413,
+        "fields": {
+            "answer": 3481,
+            "issue": 29,
+            "issue_score": -0.4,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12417,
+        "fields": {
+            "answer": 3483,
+            "issue": 29,
+            "issue_score": 0.35,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12419,
+        "fields": {
+            "answer": 3482,
+            "issue": 29,
+            "issue_score": -0.1,
+            "issue_importance": 10
         }
     }
 ]
@@ -15209,7 +15357,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3481,
             "candidate": 77,
-            "answer_feedback": "This is a good, solid response to the question."
+            "answer_feedback": "While this is what evangelical Huckabee supporters would like to hear, this is not too popular on a national level. Even Arnie supported the court's decision."
         }
     },
     {
@@ -15218,7 +15366,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3482,
             "candidate": 77,
-            "answer_feedback": "This is a good, solid response to the question."
+            "answer_feedback": "It's good to uphold your long-time beliefs, but Republicans from all spectrums are expecting you to fight much harder on this issue."
         }
     },
     {
@@ -15227,7 +15375,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3483,
             "candidate": 77,
-            "answer_feedback": "Interesting answer, though a few people are mumbling about you comparing yourself to Lincoln."
+            "answer_feedback": "Just expect the same type of result from 2016 and 2020. Evangelicals are absolutely infuriated with this response as expected, but moderates just may cozy up to you more so than they otherwise would have."
         }
     },
     {
@@ -15552,6 +15700,24 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 12397,
             "candidate": 77,
             "answer_feedback": "Your speech at your rally the next day in Savannah made national headlines, and it seems a lot of Musk supporters are raising eyebrows. Could this get as much of the Republican Party united behind you to pull off a win on November 5th?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12404,
+        "fields": {
+            "answer": 12256,
+            "candidate": 77,
+            "answer_feedback": "Martha McSally has lost some popularity in Arizona, but she is someone who is popular among both wings of the party. She should help you unite on issues such as immigration as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12408,
+        "fields": {
+            "answer": 12403,
+            "candidate": 77,
+            "answer_feedback": "It's good to unite the party, but do keep in mind that some moderates may flock to Beshear with this conservative pivot of yours."
         }
     }
 ]

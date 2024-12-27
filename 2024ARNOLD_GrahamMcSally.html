@@ -6810,7 +6810,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3341,
             "candidate": 78,
             "affected_candidate": 80,
-            "global_multiplier": 0.15
+            "global_multiplier": 0.25
         }
     },
     {
@@ -6970,7 +6970,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3348,
             "candidate": 77,
             "affected_candidate": 80,
-            "global_multiplier": 0.25
+            "global_multiplier": 1
         }
     },
     {
@@ -7010,7 +7010,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3349,
             "candidate": 77,
             "affected_candidate": 80,
-            "global_multiplier": 0.3
+            "global_multiplier": 1.5
         }
     },
     {
@@ -7110,7 +7110,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3343,
             "candidate": 77,
             "affected_candidate": 80,
-            "global_multiplier": 0.2
+            "global_multiplier": 0.4
         }
     },
     {
@@ -7120,7 +7120,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3343,
             "candidate": 78,
             "affected_candidate": 80,
-            "global_multiplier": 0.2
+            "global_multiplier": 0.4
         }
     },
     {
@@ -7820,7 +7820,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 12259,
             "candidate": 78,
             "affected_candidate": 80,
-            "global_multiplier": 0.1
+            "global_multiplier": 0.5
         }
     },
     {
@@ -8361,7 +8361,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12475,
         "fields": {
             "answer": 3464,
-            "issue": "27",
+            "issue": 27,
             "issue_score": -0.55,
             "issue_importance": 10
         }
@@ -8371,7 +8371,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12476,
         "fields": {
             "answer": 3465,
-            "issue": "27",
+            "issue": 27,
             "issue_score": -0.2,
             "issue_importance": 10
         }
@@ -9901,6 +9901,65 @@ campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/bScR258.png";
 campaignTrail_temp.candidate_last_name = "<small>Schwarzenegger</small>";
 campaignTrail_temp.running_mate_last_name = "Graham";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[0] == 0) {
+        setImage("https://media.tenor.com/DHYbd-0GEScAAAAe/cala-a-boca-arnold-schwarzenegger.png");
+        return `<h3>WHAT THE HELL DID YOU DO?!?</h3><p>Remember when I told you that you were a funny guy and I would kill you last? I lied. How do you screw it up so badly that you don't even win a single state? You've just been erased. It's because you're one ugly motherfucker. You're fired. I have a love interest in every one of my films - a gun. And I'm going to use it right now on you. Hasta la vista, baby! <p> *shoots the gun* <p> A Secret Service agent walks in the room and sees you dead on the floor. "Ice to see you," the President said. "I let him go." <p>The agent doesn't know what to say and he just leaves the room, shutting the door behind him. </p>`;
+    }
+    if(quickstats[0] > 0) {
+        setImage("");
+        return ``;
+    }
+    if(quickstats[0] > 105) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 173) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 206) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] == 269) {
+        setImage("https://dims.apnews.com/dims4/default/c0655b4/2147483647/strip/true/crop/3865x2174+0+201/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F%5B1%2F%2C%20%2F26%2C%20-67%2C%2097%2C%2018%2C%2078%2C%2010%2C%20-36%2C%2016%2C%20-97%2C%20115%2C%20-93%2C%20-9%2C%20-17%2C%2043%2C%20127%2C%20-52%2C%20-96%2C%20-39%2C%20-49%2C%2063%2C%2068%2C%2093%2C%20-7%2C%2086%2C%20-23%2C%2015%2C%20-45%5D%2F05e4c752929a47c0a2824b77305bf64e");
+        return `<h3>Fight! Fight! Fight!</h3><p>The election has been deadlocked for one of two reasons: Both you and Beshear received 269 electoral votes, or Elon Musk was able to win enough states and deadlock the election in some way, shape, or form. <p>Right outside the Capitol in the same spot there were insurrectionists four years ago, there are fists up in the air. <p> "Fight! Fight! Fight!" shout the demonstrators. <p>Fight to put Elon Musk and Vivek Ramaswamy into the White House. You are so fed up with it that you just hope the constitutional process plays out as intended. <p>Nevertheless, it's impossible to say who's going to win the presidency. But the vote splitting among Republicans makes it seem like the Democrats have the advantage, especially considering they have both houses of Congress. Good luck, Mr. Vice President. </p>`;
+    }
+    if(quickstats[0] > 269) {
+        setImage("https://thenational-the-national-prod.cdn.arcpublishing.com/resizer/v2/LH4I3FYSRVEXBLAOC5ZYIPJYLY.jpg?smart=true&auth=2b79bdfe3e630b6caf1a7908f533636eef19d4be70463c5e68463d719ad1c650&width=400&height=225");
+        return `<h3>A close call, but you've won this thing. </h3><p>Well done, Mr. Vice President. You pulled off an upset that hasn't been seen in a long time. Most thought that you couldn't win with a divided party, two terms of Schwarzenegger, Allan Lichtman predicting a Beshear victory, and a more energized Democratic Party, but you defied the odds. <p>Arnold is as pleased as can be, but there is a lot of work ahead of you. You are going in with a fully Democratic-controlled Congress and a lot of Republicans opposing you from the right, but after doing it for eight years with Arnold, you should be prepared for the job. Best of luck to you, Mr. Graham. </p>`;
+    }
+    if(quickstats[0] > 304) {
+        setImage("https://cdn.media.rollcall.com/author/2018/08/RNC125_083004.jpg");
+        return `<h3>Only if John could see this.</h3><p>This was the first line of your victory speech that you deliver in front of a large crowd at the University of South Carolina in Columbia. It is about 1:30 in the morning, and your wins in Virginia and Michigan have delivered the presidency to you. <p>John McCain is looking down on you and is very proud of you from heaven. You wish that he would be here to see his best friend become the 46th President of the United States, but the celebration continues. Democrats do have control of both houses of Congress, but nevertheless, be prepared to compromise just like Arnie did for eight years. </p>`;
+    }
+    if(quickstats[0] > 339) {
+        setImage("");
+        return `<h3>Unbelievable. Even better than Arnie.</h3><p>You did better than Arnold Schwarzenegger in both 2016 and 2020, and this is quite the victory for the ages. Some wonder if the Presidator's approval rating was higher than everyone expected, or if Andy Beshear just lost a lot of support for whatever reason. You're winning states like Michigan, Pennsylvania, and New Mexico for crying out loud. Who would've thought? <p>Democrats still have control of the Senate, but the Republicans narrowly gained control of the House. You have a lot of momentum on your side that nobody saw coming, and now it's time for four more years of the Schwarzenegger style of politics. </p>`;
+    }
+    if(quickstats[0] > 426) {
+        setImage("https://townsquare.media/site/442/files/2019/10/terminator-dark-fate-1.jpg?w=780&q=75");
+        return `<h3>Andy, you're terminated.</h3><p>Those were the exact words that came out of Arnold Schwarzenegger's mouth after you absolutely routed him in a 400+ electoral vote landslide. You live on the legacy of the Terminator, and not just him. This is a win to the likes of the great Ronald Reagan, the same guy that Arnie drew many comparisons to in a lot of different ways. <p>In all seriousness, there were very low expectations for a victory like this, considering the GOP was split and has been in power for eight years. Even Allan Lichtman is going crazy right now. </p>`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2023-11/231117-capitol-riot-mn-1615-f75577.jpg");
+        return `<h3>Oh, No. No. Not Again.</h3><p>It is January 6th, 2025. You are sitting in the United States Capitol building certifying your victory, until you hear that banging sound you heard just four years before. <p>They are insurrectionists, and even more than four years ago. Here we go again. But the person who came up to your face wasn't who you expected. Donald Trump himself went into the Capitol with a gun in his hand and said your boss's famous words. "Hasta la vista, baby". <p>Before he could shoot you, one of his supporters lit a match and now the fire alarms are beeping loudly. A couple of Congressmen died along with more police officers and firefighters. <p>Did we just witness the end of democracy in the United States as we know it? Was your 538-0 landslide even legitimate? Who knows...</p>`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -9916,6 +9975,108 @@ campaignTrail_temp.jet_data = [{
         "canName": "<small>Schwarzenegger</small>",
         "runImage": "https://i.imgur.com/bScR258.png",
         "canImage": "https://i.imgur.com/V0qfxaH.png"
+    },
+    "endings_enabled": true,
+    "ending_data": {
+        "1735265562015": {
+            "id": 1735265562015,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://media.tenor.com/DHYbd-0GEScAAAAe/cala-a-boca-arnold-schwarzenegger.png",
+            "endingText": "<h3>WHAT THE HELL DID YOU DO?!?</h3><p>Remember when I told you that you were a funny guy and I would kill you last? I lied. How do you screw it up so badly that you don't even win a single state? You've just been erased. It's because you're one ugly motherfucker. You're fired. I have a love interest in every one of my films - a gun. And I'm going to use it right now on you. Hasta la vista, baby! <p> *shoots the gun* <p> A Secret Service agent walks in the room and sees you dead on the floor. \"Ice to see you,\" the President said. \"I let him go.\" <p>The agent doesn't know what to say and he just leaves the room, shutting the door behind him. </p>",
+            "amount": "0"
+        },
+        "1735265566104": {
+            "id": 1735265566104,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "",
+            "amount": "0"
+        },
+        "1735265568679": {
+            "id": 1735265568679,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "105"
+        },
+        "1735265628786": {
+            "id": 1735265628786,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "173"
+        },
+        "1735265632348": {
+            "id": 1735265632348,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "206"
+        },
+        "1735265638668": {
+            "id": 1735265638668,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://dims.apnews.com/dims4/default/c0655b4/2147483647/strip/true/crop/3865x2174+0+201/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F%5B1%2F%2C%20%2F26%2C%20-67%2C%2097%2C%2018%2C%2078%2C%2010%2C%20-36%2C%2016%2C%20-97%2C%20115%2C%20-93%2C%20-9%2C%20-17%2C%2043%2C%20127%2C%20-52%2C%20-96%2C%20-39%2C%20-49%2C%2063%2C%2068%2C%2093%2C%20-7%2C%2086%2C%20-23%2C%2015%2C%20-45%5D%2F05e4c752929a47c0a2824b77305bf64e",
+            "endingText": "<h3>Fight! Fight! Fight!</h3><p>The election has been deadlocked for one of two reasons: Both you and Beshear received 269 electoral votes, or Elon Musk was able to win enough states and deadlock the election in some way, shape, or form. <p>Right outside the Capitol in the same spot there were insurrectionists four years ago, there are fists up in the air. <p> \"Fight! Fight! Fight!\" shout the demonstrators. <p>Fight to put Elon Musk and Vivek Ramaswamy into the White House. You are so fed up with it that you just hope the constitutional process plays out as intended. <p>Nevertheless, it's impossible to say who's going to win the presidency. But the vote splitting among Republicans makes it seem like the Democrats have the advantage, especially considering they have both houses of Congress. Good luck, Mr. Vice President. </p>",
+            "amount": "269"
+        },
+        "1735265650069": {
+            "id": 1735265650069,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://thenational-the-national-prod.cdn.arcpublishing.com/resizer/v2/LH4I3FYSRVEXBLAOC5ZYIPJYLY.jpg?smart=true&auth=2b79bdfe3e630b6caf1a7908f533636eef19d4be70463c5e68463d719ad1c650&width=400&height=225",
+            "endingText": "<h3>A close call, but you've won this thing. </h3><p>Well done, Mr. Vice President. You pulled off an upset that hasn't been seen in a long time. Most thought that you couldn't win with a divided party, two terms of Schwarzenegger, Allan Lichtman predicting a Beshear victory, and a more energized Democratic Party, but you defied the odds. <p>Arnold is as pleased as can be, but there is a lot of work ahead of you. You are going in with a fully Democratic-controlled Congress and a lot of Republicans opposing you from the right, but after doing it for eight years with Arnold, you should be prepared for the job. Best of luck to you, Mr. Graham. </p>",
+            "amount": "269"
+        },
+        "1735265651152": {
+            "id": 1735265651152,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://cdn.media.rollcall.com/author/2018/08/RNC125_083004.jpg",
+            "endingText": "<h3>Only if John could see this.</h3><p>This was the first line of your victory speech that you deliver in front of a large crowd at the University of South Carolina in Columbia. It is about 1:30 in the morning, and your wins in Virginia and Michigan have delivered the presidency to you. <p>John McCain is looking down on you and is very proud of you from heaven. You wish that he would be here to see his best friend become the 46th President of the United States, but the celebration continues. Democrats do have control of both houses of Congress, but nevertheless, be prepared to compromise just like Arnie did for eight years. </p>",
+            "amount": "304"
+        },
+        "1735265673738": {
+            "id": 1735265673738,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "<h3>Unbelievable. Even better than Arnie.</h3><p>You did better than Arnold Schwarzenegger in both 2016 and 2020, and this is quite the victory for the ages. Some wonder if the Presidator's approval rating was higher than everyone expected, or if Andy Beshear just lost a lot of support for whatever reason. You're winning states like Michigan, Pennsylvania, and New Mexico for crying out loud. Who would've thought? <p>Democrats still have control of the Senate, but the Republicans narrowly gained control of the House. You have a lot of momentum on your side that nobody saw coming, and now it's time for four more years of the Schwarzenegger style of politics. </p>",
+            "amount": "339"
+        },
+        "1735265681528": {
+            "id": 1735265681528,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://townsquare.media/site/442/files/2019/10/terminator-dark-fate-1.jpg?w=780&q=75",
+            "endingText": "<h3>Andy, you're terminated.</h3><p>Those were the exact words that came out of Arnold Schwarzenegger's mouth after you absolutely routed him in a 400+ electoral vote landslide. You live on the legacy of the Terminator, and not just him. This is a win to the likes of the great Ronald Reagan, the same guy that Arnie drew many comparisons to in a lot of different ways. <p>In all seriousness, there were very low expectations for a victory like this, considering the GOP was split and has been in power for eight years. Even Allan Lichtman is going crazy right now. </p>",
+            "amount": "426"
+        },
+        "1735265689477": {
+            "id": 1735265689477,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2023-11/231117-capitol-riot-mn-1615-f75577.jpg",
+            "endingText": "<h3>Oh, No. No. Not Again.</h3><p>It is January 6th, 2025. You are sitting in the United States Capitol building certifying your victory, until you hear that banging sound you heard just four years before. <p>They are insurrectionists, and even more than four years ago. Here we go again. But the person who came up to your face wasn't who you expected. Donald Trump himself went into the Capitol with a gun in his hand and said your boss's famous words. \"Hasta la vista, baby\". <p>Before he could shoot you, one of his supporters lit a match and now the fire alarms are beeping loudly. A couple of Congressmen died along with more police officers and firefighters. <p>Did we just witness the end of democracy in the United States as we know it? Was your 538-0 landslide even legitimate? Who knows...</p>",
+            "amount": "538"
+        }
     }
 }
 ]
@@ -9939,8 +10100,8 @@ campaignTrail_temp.running_mate_state_id = '189';
 campaignTrail_temp.running_mate_image_url = 'https://dronelife.com/wp-content/uploads/2024/11/512px-Donald_Trump_Jr._53808883476_cropped.jpg';
 campaignTrail_temp.running_mate_last_name = 'Trump Jr';
 
-        campaignTrail_temp.candidate_json[0]["fields"].electoral_victory_message = "<h3>Bill Clinton has won the 1992 election.</h3><p>After you dropped out, the primary became a bitter fight between California Governor Jerry Brown and Arkansas Governor Bill Clinton. The relatively unknown, youthful Bill Clinton became the party nominee for the Democrats in 1992. His third-way Democratic policy ideas seemed to resonate with enough voters to hand him the presidency, on top of Ross Perot's candidacy and the unpopularity of President George H.W. Bush. </p>";
-        campaignTrail_temp.candidate_json[0]["fields"].electoral_loss_message = "<h3>Bill Clinton has lost the 1992 election.</h3><p>After you dropped out, the primary became a bitter fight between California Governor Jerry Brown and Arkansas Governor Bill Clinton. The relatively unknown, youthful Bill Clinton became the party nominee for the Democrats in 1992. He wasn't able to hand the Democrats the White House in 1992, which is likely due to some baggage he had, as well as his relative unfamiliarity with the general public outside of Arkansas. Therefore, President George H.W. Bush has been re-elected to another four year term, giving the Republican Party sixteen straight years of White House control. </p>";
+        campaignTrail_temp.candidate_json[0]["fields"].electoral_victory_message = "<h3>JOSH HAWLEY ELECTED 46TH PRESIDENT</h3><p>This was an upset for the ages. Josh Hawley won the Republican primaries in 2024 and ultimately won the presidential election. Even with Donald Trump Jr as his running-mate. Analysts, the media, and the people are absolutely stunned at this victory, considering Hawley's strongly pro-Trump and right-wing populist rhetoric. Was this the result that would've occurred had Trump beat Arnie in the 2016 primaries and went up against Hillary Clinton? Most analysts think so, and who knows how that would've ended up.<p>You sat this election out alongside Arnold Schwarzenegger, but all you do is congratulate the Missouri Senator on his victory. Democrats have both houses of Congress, and there are many Republicans like you in opposition to him. We'll just have to wait and see what happens I suppose.</p>";
+        campaignTrail_temp.candidate_json[0]["fields"].electoral_loss_message = "<h3>BESHEAR DEFEATS HAWLEY, BECOMES 46TH PRESIDENT</h3><p>In all seriousness, was this surprising? Josh Hawley was so far-right and pro-Trump, alongside eight years of Republicans in the White House. Andy Beshear was so popular and moderate, and even you voted for him after Hawley was nominated.<p>Most Republicans are angry at you for not throwing your hat into the race, thinking that you would've had a better chance to win the 2024 election as the Vice President of a somewhat popular administration. Nevertheless, the 2028 Republican primaries are wide open, with many candidates speculated to run. You are one of them, but whether you decide to seek the nomination then is up to you.</p>";
   campaignTrail_temp.multiple_endings=false
          campaignTrail_temp.question_number = 34;
 }

@@ -8916,6 +8916,61 @@ campaignTrail_temp.running_mate_image_url = "https://wpcdn.us-east-1.vip.tn-clou
 campaignTrail_temp.candidate_last_name = "Beshear";
 campaignTrail_temp.running_mate_last_name = "Coleman";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(aa[0].electoral_votes == 0 && aa[0].candidate == 78) {
+        setImage("https://atomicjunkshop.com/wp-content/uploads/2019/11/Terminator-Orion.jpg");
+        return `<h3>Hasta la vista, baby!</h3><p></p>`;
+    }
+    if(aa[0].electoral_votes > 0 && aa[0].electoral_votes < 113 && aa[0].candidate == 78) {
+        setImage("https://www.usnews.com/dims4/USNEWS/81d9e35/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F42%2Fe868f782041ad7f5586d83dec46b24%2F3159FE_DA_080128tank_10420.jpg");
+        return `<h3>Wow... this is a stunning loss.</h3><p></p>`;
+    }
+    if(aa[0].electoral_votes > 112 && aa[0].electoral_votes < 200 && aa[0].candidate == 78) {
+        setImage("https://www.hindustantimes.com/ht-img/img/2024/11/07/1600x900/US_1730948623505_1730948623674.webp");
+        return `<h3>What the hell happened to the Thirteen Keys?!?</h3><p> </p>`;
+    }
+    if(aa[0].electoral_votes > 199 && aa[0].electoral_votes < 269 && aa[0].candidate == 78) {
+        setImage("https://www.hollywoodreporter.com/wp-content/uploads/2017/08/arnold_schwarzenegger.jpg?w=1296&h=730&crop=1");
+        return `<h3>The Presidator's Legacy Continues</h3><p>Although you did put up a good fight, it just wasn't enough to make you the 46th President of the United States. Andy Beshear has won this race not unexpectedly, largely due to your widespread unpopularity, a split GOP, high inflation, and party fatigue. <p>While your political career is likely over, your thirty years in politics have been very impactful to this country, and John McCain is probably looking down on you and is happy for all of your hard work. But on the bright side, you did do better than Mitt Romney in 2012 and you did outperform some expectations. </p>`;
+    }
+    if(aa[0].electoral_votes == 269 && aa[0].candidate == 78) {
+        setImage("https://dims.apnews.com/dims4/default/c0655b4/2147483647/strip/true/crop/3865x2174+0+201/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F%5B1%2F%2C%20%2F26%2C%20-67%2C%2097%2C%2018%2C%2078%2C%2010%2C%20-36%2C%2016%2C%20-97%2C%20115%2C%20-93%2C%20-9%2C%20-17%2C%2043%2C%20127%2C%20-52%2C%20-96%2C%20-39%2C%20-49%2C%2063%2C%2068%2C%2093%2C%20-7%2C%2086%2C%20-23%2C%2015%2C%20-45%5D%2F05e4c752929a47c0a2824b77305bf64e");
+        return `<h3>Fight! Fight! Fight!</h3><p>The election has been deadlocked for one of two reasons: Both you and Graham received 269 electoral votes, or Elon Musk was able to win enough states and deadlock the election in some way, shape, or form. <p>Right outside the Capitol in the same spot there were insurrectionists four years ago, there are fists up in the air. <p> "Fight! Fight! Fight!" shout the demonstrators. <p>Fight to put Elon Musk and Vivek Ramaswamy into the White House. You are so fed up with it that you just hope the constitutional process plays out as intended. <p>Nevertheless, it's impossible to say who's going to win the presidency. But the vote splitting among Republicans makes it seem like you have the advantage, especially considering your party has both houses of Congress. Good luck, Governor Beshear. </p>`;
+    }
+    if(aa[0].electoral_votes > 269 && aa[0].electoral_votes < 333 && aa[0].candidate == 78) {
+        setImage("https://media.cnn.com/api/v1/images/stellar/prod/191105215321-01-andy-beshear-victory-speech-screeengrab.jpg?q=w_2500,h_1406,x_0,y_0,c_fill");
+        return `<h3>ANDY BESHEAR ELECTED 46TH PRESIDENT</h3><p>Well done, Mr. Vice President. You pulled off an upset that hasn't been seen in a long time. Most thought that you couldn't win with a divided party, two terms of Schwarzenegger, Allan Lichtman predicting a Beshear victory, and a more energized Democratic Party, but you defied the odds. <p>Arnold is as pleased as can be, but there is a lot of work ahead of you. You are going in with a fully Democratic-controlled Congress and a lot of Republicans opposing you from the right, but after doing it for eight years with Arnold, you should be prepared for the job. Best of luck to you, Mr. Graham. </p>`;
+    }
+    if(aa[0].electoral_votes > 332 && aa[0].electoral_votes < 380 && aa[0].candidate == 78) {
+        setImage("https://media.cnn.com/api/v1/images/stellar/prod/191105215321-01-andy-beshear-victory-speech-screeengrab.jpg?q=w_2500,h_1406,x_0,y_0,c_fill");
+        return `<h3>This is an astounding victory. Just like 2008.</h3><p>This was the first line of your victory speech that you deliver in front of a large crowd at the University of South Carolina in Columbia. It is about 1:30 in the morning, and your wins in Virginia and Michigan have delivered the presidency to you. <p>John McCain is looking down on you and is very proud of you from heaven. You wish that he would be here to see his best friend become the 46th President of the United States, but the celebration continues. Democrats do have control of both houses of Congress, but nevertheless, be prepared to compromise just like Arnie did for eight years. </p>`;
+    }
+    if(aa[0].electoral_votes > 379 && aa[0].electoral_votes < 538 && aa[0].candidate == 78) {
+        setImage("https://images.wsj.net/im-972227?width=1260&height=867");
+        return `<h3>The Southern Democrats are back. Resoundingly.</h3><p></p>`;
+    }
+    if(aa[0].electoral_votes == 538 && aa[0].candidate == 78) {
+        setImage("https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2023-11/231117-capitol-riot-mn-1615-f75577.jpg");
+        return `<h3>Oh, No. No. Not Again.</h3><p>It is January 6th, 2025. You are sitting in the United States Capitol building certifying your victory, until you hear that banging sound you heard just four years before. <p>They are insurrectionists, and even more than four years ago. Here we go again. But the person who came up to your face wasn't who you expected. Donald Trump himself went into the Capitol with a gun in his hand and said your boss's famous words. "Hasta la vista, baby". <p>Before he could shoot you, one of his supporters lit a match and now the fire alarms are beeping loudly. A couple of Congressmen died along with more police officers and firefighters. <p>Did we just witness the end of democracy in the United States as we know it? Was your 538-0 landslide even legitimate? Who knows...</p>`;
+    }
+    if(aa[0].electoral_votes > 269 && aa[0].candidate == 79) {
+        setImage("https://media3.giphy.com/media/S43RIQ4OtWGKMTyU8q/giphy.gif?cid=6c09b952cbwj07sz56woivka6ft386vz0hoze2i9exoilo3u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g");
+        return `<h3>What the fuck? President Elon Musk?!?</h3><p>The entire nation is stunned beyond belief right now. Not only did you lose a very winnable election for Democrats, but Elon Musk won the election. He becomes the second consecutive naturalized citizen to become President, as well as the first without government or military experience and the first third-party candidate since the 1800s to become President. How on earth did this happen? And how did you allow this to happen? <p>There are two words that are floated around here. They are "bigshot" and "spacebar", and nobody knows the context of them. Maybe there will be more to say later.</p>`;
+    }	    
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -8957,8 +9012,8 @@ campaignTrail_temp.running_mate_state_id = '187';
 campaignTrail_temp.running_mate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Sen_Chris_Murphy_in_2023.jpg';
 campaignTrail_temp.running_mate_last_name = 'Murphy';
 
-        campaignTrail_temp.candidate_json[1]["fields"].electoral_victory_message = "<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>This was an upset for the ages. Josh Hawley won the Republican primaries in 2024 and ultimately won the presidential election. Even with Donald Trump Jr as his running-mate. Analysts, the media, and the people are absolutely stunned at this victory, considering Hawley's strongly pro-Trump and right-wing populist rhetoric. Was this the result that would've occurred had Trump beat Arnie in the 2016 primaries and went up against Hillary Clinton? Most analysts think so, and who knows how that would've ended up.<p>You sat this election out alongside Arnold Schwarzenegger, but all you do is congratulate the Missouri Senator on his victory. Democrats have both houses of Congress, and there are many Republicans like you in opposition to him. We'll just have to wait and see what happens I suppose.</p>";
-        campaignTrail_temp.candidate_json[1]["fields"].electoral_loss_message = "<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>In all seriousness, was this surprising? Josh Hawley was so far-right and pro-Trump, alongside eight years of Republicans in the White House. Andy Beshear was so popular and moderate, and even you voted for him after Hawley was nominated.<p>Most Republicans are angry at you for not throwing your hat into the race, thinking that you would've had a better chance to win the 2024 election as the Vice President of a somewhat popular administration. Nevertheless, the 2028 Republican primaries are wide open, with many candidates speculated to run. You are one of them, but whether you decide to seek the nomination then is up to you.</p>";
+        campaignTrail_temp.candidate_json[1]["fields"].electoral_victory_message = "<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>Without you in the primaries, Michigan Governor Gretchen Whitmer was able to win the 2024 Democratic primaries, as well as the presidential election. Therefore, she will not only become the 46th President of the United States, but she will also be the first female President. Most can say this was expected, although the shadow of Hillary Clinton's ill-fated campaign eight years ago still lived strong. <p>Most Americans were ready for a change after eight years of Arnold Schwarzenegger as President, and Lindsey Graham wasn't popular especially with a split Republican Party. Alongside Whitmer, Connecticut Senator Chris Murphy will become the 49th Vice President of the United States. Democrats have a trifecta in Washington, and are ready to pass as much legislation as they can before the expected red wave of 2026.</p>";
+        campaignTrail_temp.candidate_json[1]["fields"].electoral_loss_message = "<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>The shadow of Hillary Clinton's campaign from 2016 has only manifested itself. It just seems like women just don't have any luck running for President, and many wonder why. Is there just a sense of misogyny in this country that nobody recognizes? Are the female candidates so bad in America? Or was the Schwarzenegger administration just so popular that allowed for an unpopular Lindsey Graham to get elected the 46th President of the United States? <p>Whatever the case, many Democrats are very disappointed that you didn't run, considering that you had red-state appeal and could've easily defeated Graham across the Midwest and even some Southern states. But you still have work to do back home, and maybe you'll run in 2028.</p>";
   campaignTrail_temp.multiple_endings=false
          campaignTrail_temp.question_number = 24;
 }

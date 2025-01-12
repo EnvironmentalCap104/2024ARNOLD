@@ -211,7 +211,7 @@ campaignTrail_temp.questions_json = [
         "pk": 386,
         "fields": {
             "priority": -2,
-            "description": "It is November 2nd, only five days before the voting. News has just broken that George Bush was arrested for drunken driving in 1976. What is your response?",
+            "description": "There are a lot of people that are worried about your selection of Vivek Ramaswamy as your running-mate in this election. Skeptics claim that he doesn't help with any other potential independent voters outside of the MAGA movement. How will you defend your selection of Vivek Ramaswamy?",
             "likelihood": 1
         }
     },
@@ -238,7 +238,7 @@ campaignTrail_temp.questions_json = [
         "pk": 12242,
         "fields": {
             "priority": 0,
-            "description": "put description here",
+            "description": "Have you seen what is happening in Springfield, Ohio? There are bomb threats all across the city due to claims by many MAGA supporters that the Haitian immigrant population are stealing and eating dogs, ducks, and cats. Governor Cordray and Senators Brown and Portman have all condemned the spreading of such so-called conspiracy theories, and schools and city offices have closed as a result of these threats. The blood is your hands for making these claims on X and on the campaign trail. What do you have to say about all of this?",
             "likelihood": 1
         }
     },
@@ -855,7 +855,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3471,
         "fields": {
             "question": 386,
-            "description": "This is the type of non-issue that is indicative of the broken American political system. George Bush was wrong for America before this news broke, and he is still wrong for America."
+            "description": "My campaign has always been a continuation of Donald Trump's campaign, and I have to stand with his supporters and his movement. Vivek is a star in the MAGA movement, and he also has a lot of charisma."
         }
     },
     {
@@ -863,15 +863,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3472,
         "fields": {
             "question": 386,
-            "description": "This is the type of non-issue that is indicative of the broken American political system. George Bush was wrong for America before this news broke, and he is still wrong for America."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3473,
-        "fields": {
-            "question": 386,
-            "description": "This is the type of non-issue that is indicative of the broken American political system. George Bush was wrong for America before this news broke, and he is still wrong for America."
+            "description": "Vivek Ramaswamy is someone that can appeal to an average American. He is anti-establishment and worked through the trades to become such a successful human being just like me. He lived the American Dream, and he will be a great Vice President."
         }
     },
     {
@@ -887,7 +879,7 @@ campaignTrail_temp.answers_json = [
         "pk": 12243,
         "fields": {
             "question": 12242,
-            "description": "put description here"
+            "description": "There is credible evidence that the Haitian immigrants are destroying the city of Springfield, and my condolences go out to all the victims of their actions. It is time to throw these illegal Haitians out of our country and make Springfield great again."
         }
     },
     {
@@ -968,6 +960,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 12254,
             "description": "I have other places I want to campaign, so I'm out. Sorry, Donald."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 12315,
+        "fields": {
+            "question": 12242,
+            "description": "What are you talking about? This is just a baseless claim from the establishment to bog down my campaign with even more scandals. The weaponization of government ends now."
         }
     }
 ]
@@ -6392,42 +6392,12 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1062,
-        "fields": {
-            "answer": 3471,
-            "candidate": 79,
-            "affected_candidate": 77,
-            "global_multiplier": 0.035
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1063,
-        "fields": {
-            "answer": 3471,
-            "candidate": 79,
-            "affected_candidate": 78,
-            "global_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1064,
         "fields": {
             "answer": 3471,
             "candidate": 79,
             "affected_candidate": 79,
-            "global_multiplier": 0.175
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1065,
-        "fields": {
-            "answer": 3471,
-            "candidate": 79,
-            "affected_candidate": 80,
-            "global_multiplier": 0.02
+            "global_multiplier": 0.05
         }
     },
     {
@@ -6436,48 +6406,8 @@ campaignTrail_temp.answer_score_global_json = [
         "fields": {
             "answer": 3472,
             "candidate": 79,
-            "affected_candidate": 77,
-            "global_multiplier": -0.0075
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1067,
-        "fields": {
-            "answer": 3473,
-            "candidate": 79,
-            "affected_candidate": 77,
-            "global_multiplier": -0.015
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1068,
-        "fields": {
-            "answer": 3473,
-            "candidate": 79,
-            "affected_candidate": 78,
-            "global_multiplier": 0.035
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1069,
-        "fields": {
-            "answer": 3473,
-            "candidate": 79,
             "affected_candidate": 79,
-            "global_multiplier": 0.175
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1070,
-        "fields": {
-            "answer": 3473,
-            "candidate": 79,
-            "affected_candidate": 80,
-            "global_multiplier": 0.02
+            "global_multiplier": 0.025
         }
     },
     {
@@ -7197,7 +7127,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3310,
             "candidate": 79,
             "affected_candidate": 79,
-            "global_multiplier": -0.25
+            "global_multiplier": -0.15
         }
     },
     {
@@ -7839,6 +7769,26 @@ campaignTrail_temp.answer_score_global_json = [
             "affected_candidate": 79,
             "global_multiplier": -0.03
         }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12312,
+        "fields": {
+            "answer": 12243,
+            "candidate": 79,
+            "affected_candidate": 79,
+            "global_multiplier": -0.1
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 12317,
+        "fields": {
+            "answer": 12315,
+            "candidate": 79,
+            "affected_candidate": 79,
+            "global_multiplier": -0.25
+        }
     }
 ]
 
@@ -8088,8 +8038,58 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 12302,
         "fields": {
             "answer": 3319,
-            "issue": "27",
+            "issue": 27,
             "issue_score": 0.55,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12307,
+        "fields": {
+            "answer": 3471,
+            "issue": 28,
+            "issue_score": 0.25,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12308,
+        "fields": {
+            "answer": 3471,
+            "issue": 29,
+            "issue_score": -0.75,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12309,
+        "fields": {
+            "answer": 3471,
+            "issue": 30,
+            "issue_score": -0.65,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12310,
+        "fields": {
+            "answer": 3471,
+            "issue": 31,
+            "issue_score": -0.75,
+            "issue_importance": 10
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_issue",
+        "pk": 12313,
+        "fields": {
+            "answer": 12243,
+            "issue": 31,
+            "issue_score": -0.85,
             "issue_importance": 10
         }
     }
@@ -8226,6 +8226,28 @@ campaignTrail_temp.answer_score_state_json = [
             "candidate": 79,
             "affected_candidate": 79,
             "state_multiplier": 0.15
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12314,
+        "fields": {
+            "answer": 12243,
+            "state": 215,
+            "candidate": 79,
+            "affected_candidate": 79,
+            "state_multiplier": -0.15
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_state",
+        "pk": 12318,
+        "fields": {
+            "answer": 12315,
+            "state": 215,
+            "candidate": 79,
+            "affected_candidate": 79,
+            "state_multiplier": -0.35
         }
     }
 ]
@@ -9335,7 +9357,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3471,
             "candidate": 79,
-            "answer_feedback": "Regardless of the recent news, it looks like Bush has received a solid bounce heading into election night. But you might get a few more votes if Gore looks to be losing."
+            "answer_feedback": "Vivek is articulate, I will give you that. But it's not like any non-MAGA voter would vote for you unless they just feel like they want a President Elon Musk without paying attention to policy initiatives anyways."
         }
     },
     {
@@ -9344,16 +9366,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3472,
             "candidate": 79,
-            "answer_feedback": "It doesn't seem like this revelation has changed much. If the election is close, some voters might jump to Gore instead of you."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 997,
-        "fields": {
-            "answer": 3473,
-            "candidate": 79,
-            "answer_feedback": "It looks like Gore has received a solid bounce heading into election night. This might help you pick up a few wavering votes."
+            "answer_feedback": "Vivek bringing up his backstory can appease some prospective supporters, but he is only second on the ticket after you. "
         }
     },
     {
@@ -9435,6 +9448,24 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 12291,
             "candidate": 79,
             "answer_feedback": "This actually turned out to go quite well for your campaign. New York was fired up for you and the Trumps, and there may be some people out there who might be tuned in to your message. Not to mention, Kid Rock really fired up the arena."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12311,
+        "fields": {
+            "answer": 12243,
+            "candidate": 79,
+            "answer_feedback": "MAGA is fired up, but mainstream politicians are strongly condemning these statements and calling them racist. People all over social media are making memes about your statements about eating dogs and cats. All in all, not a good look."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 12316,
+        "fields": {
+            "answer": 12315,
+            "candidate": 79,
+            "answer_feedback": "If you say so..."
         }
     }
 ]

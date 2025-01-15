@@ -8848,6 +8848,53 @@ campaignTrail_temp.running_mate_image_url = "https://m.media-amazon.com/images/I
 campaignTrail_temp.candidate_last_name = "Trump";
 campaignTrail_temp.running_mate_last_name = "2024";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[1] == 0) {
+        setImage("https://media.vanityfair.com/photos/58c02843208b4945c3920c8d/4:3/w_1280,h_960,c_limit/donald-trump-arnold-schwarzenegger-02.jpg");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[1] > 0) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[1] > 10) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[1] > 10) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 0) {
+        setImage("https://whyy.org/wp-content/uploads/2024/12/donald-trump-elon-musk-2024-10-05-768x512.jpg");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 45) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 270) {
+        setImage("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/the-tesla-ceo-was-spotted-wearing-a-black-maga-cap-along-with-a-gothic-looking-font-and-a-black-t--285945708-16x9_0.jpg?VersionId=9M..0a9LCG1Iia_hFfUvNEnsx_8O_Bw3");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://ichef.bbci.co.uk/news/1024/cpsprodpb/9efa/live/d4746000-4278-11ef-9e1c-3b4a473456a6.jpg.webp");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -8864,8 +8911,81 @@ campaignTrail_temp.jet_data = [{
         "canImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Donald_Trump_2023_%28cropped%29.jpg",
         "runImage": "https://m.media-amazon.com/images/I/61MrMXTMeuL.jpg"
     },
-    "endings_enabled": false,
-    "ending_data": {}
+    "endings_enabled": true,
+    "ending_data": {
+        "1736911103733": {
+            "id": 1736911103733,
+            "variable": "1",
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://media.vanityfair.com/photos/58c02843208b4945c3920c8d/4:3/w_1280,h_960,c_limit/donald-trump-arnold-schwarzenegger-02.jpg",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "0"
+        },
+        "1736911111320": {
+            "id": 1736911111320,
+            "variable": "1",
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "0"
+        },
+        "1736911115723": {
+            "id": 1736911115723,
+            "variable": "1",
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "10"
+        },
+        "1736911118206": {
+            "id": 1736911118206,
+            "variable": "1",
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "10"
+        },
+        "1736911125170": {
+            "id": 1736911125170,
+            "variable": "0",
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://whyy.org/wp-content/uploads/2024/12/donald-trump-elon-musk-2024-10-05-768x512.jpg",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "0"
+        },
+        "1736911131791": {
+            "id": 1736911131791,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "45"
+        },
+        "1736911152070": {
+            "id": 1736911152070,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/the-tesla-ceo-was-spotted-wearing-a-black-maga-cap-along-with-a-gothic-looking-font-and-a-black-t--285945708-16x9_0.jpg?VersionId=9M..0a9LCG1Iia_hFfUvNEnsx_8O_Bw3",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "270"
+        },
+        "1736911159763": {
+            "id": 1736911159763,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/9efa/live/d4746000-4278-11ef-9e1c-3b4a473456a6.jpg.webp",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "538"
+        }
+    }
 }
 ]
 

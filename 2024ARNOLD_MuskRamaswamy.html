@@ -8862,37 +8862,45 @@ endingPicker = (out, totv, aa, quickstats) => {
         }, 50);
     }
 
-    if(quickstats[1] == 0) {
+    if(quickstats[1] == 0 && quickstats[0] == 0 && aa[0].electoral_votes > 269) {
         setImage("https://media.vanityfair.com/photos/58c02843208b4945c3920c8d/4:3/w_1280,h_960,c_limit/donald-trump-arnold-schwarzenegger-02.jpg");
+        return `<h3>Hasta la vista, baby!</h3><p>Those were the exact words that came out of President Arnold Schwarzenegger's mouth after he saw the news that you got 0% of the vote. But in all honesty, his anger was directed at his arch-rival for eight years: The man who started this political movement that attempted to overthrow the government four years ago. The man that called every election he lost rigged and stolen. That man is Donald J. Trump. <p>The people are sick of this man, and they were sick of you too. Everyone knew that after that dark day where there were chants of "Hang Lindsey" this movement was cooked for all eternity. This is a sweet victory for Arnold Schwarzenegger, no matter if Lindsey or Andy won this election.</p>`;
+    }
+    if(quickstats[0] == 0  && quickstats[1] > 0 && quickstats[1] < 10 && aa[0].electoral_votes > 269 && aa[0].candidate == 77) {
+        setImage("https://foreignpolicy.com/wp-content/uploads/2020/11/GettyImages-1229448444.jpg?w=800?quality=80");
+        return `<h3>As expected, you lost.</h3><p>But what wasn't as expected is that Vice President Lindsey Graham won the 2024 presidential election, defeating you and former Kentucky Governor Andy Beshear against most odds. This was an underwhelming night for your campaign, as many were expecting you to crack 10% or even 15% of the vote due to your huge name recognition and appeal to tech gurus and MAGA supporters. <p>The election fraud claims spread across social media, but considering your smaller popular vote percentage, they don't really matter to the general public as much as Donald Trump's campaigns. But nevertheless, Lindsey Graham will become the 46th President of the United States and Martha McSally will become the 49th Vice President of the United States and the first female VP.</p>`;
+    }
+    if(quickstats[0] == 0  && quickstats[1] > 0 && quickstats[1] < 10 && aa[0].electoral_votes > 269 && aa[0].candidate == 78) {
+        setImage("https://www.thenation.com/wp-content/uploads/2023/11/GettyImages-1781193063.jpg");
+        return `<h3>As expected, you lost.</h3><p>Former Kentucky Governor Andy Beshear won the 2024 presidential election, defeating you and Vice President Lindsey Graham as expected. This was an underwhelming night for your campaign, as many were expecting you to crack 10% or even 15% of the vote due to your huge name recognition and appeal to tech gurus and MAGA supporters. <p>The election fraud claims spread across social media, but considering your smaller popular vote percentage, they don't really matter to the general public as much as Donald Trump's campaigns. But nevertheless, Andy Beshear will become the 46th President of the United States and Tammy Duckworth will become the 49th Vice President of the United States and the first female VP.</p>`;
+    }        
+    if(quickstats[0] == 0  && quickstats[1] > 9 && aa[0].electoral_votes > 269 && aa[0].candidate == 77) {
+        setImage("https://s.wsj.net/public/resources/images/BN-LK188_CAPJOU_G_20151123110758.jpg");
         return `Put ending text here, you can and should use <p>HTML tags</p>!`;
     }
-    if(quickstats[1] > 0) {
-        setImage("");
+    if(quickstats[0] == 0  && quickstats[1] > 9 && aa[0].electoral_votes > 269 && aa[0].candidate == 78) {
+        setImage("https://s.wsj.net/public/resources/images/BN-LK188_CAPJOU_G_20151123110758.jpg");
         return `Put ending text here, you can and should use <p>HTML tags</p>!`;
     }
-    if(quickstats[1] > 10) {
-        setImage("");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
-    }
-    if(quickstats[1] > 10) {
-        setImage("");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
-    }
-    if(quickstats[0] > 0) {
+    if(quickstats[0] > 0  && quickstats[0] < 269 && && aa[0].electoral_votes < 270) {
         setImage("https://whyy.org/wp-content/uploads/2024/12/donald-trump-elon-musk-2024-10-05-768x512.jpg");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+        return `<h3>You did it. You actually deadlocked the election.</h3><p>Your good buddy Donald Trump or even Mighty Mike Huckabee weren't able to pull this off. But since you won Republican-leaning states, you would think that Vice President Lindsey Graham would win the election. However, that is up in the air as Democrats do have both houses of Congress. <p>So what the hell? This is the first deadlocked election since 1824, and now we could have Lindsey Graham as President and Tammy Duckworth as Vice President. But it could be a whole different ballgame. We'll have to wait and see what happens when the election is certified I guess. I can promise you one thing though: You are probably not going to be the 46th President of the United States, in spite of your historic achievement.</p>`;
     }
-    if(quickstats[0] > 45) {
-        setImage("");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    if(quickstats[0] > 0  && quickstats[0] < 269 &&  && aa[0].electoral_votes > 269 && aa[0].candidate == 77) {
+        setImage("https://static01.nyt.com/images/2019/07/28/opinion/28kruseWeb/28kruseWeb-articleLarge.jpg?quality=75&auto=webp&disable=upscale");
+        return `<h3>By god! First time since George Wallace.</h3><p>The spirit of George Wallace has returned, as you have become the first third-party candidate to win states and electoral votes since Wallace's campaign in 1968. And let's be real, you and George had quite similar populist messages that appealed to the Christian right and the white working-class. <p>But all in all, it was still expected you would lose, even though you weren't able to tip the election to the Democrats for the third straight year. In all seriousness though, most wonder how you were able to win a state this year considering Trump and Huckabee couldn't do it either time. Maybe you had more support than them this year? Or was there a different factor at play?</p>`;
     }
-    if(quickstats[0] > 270) {
+    if(quickstats[0] > 0  && quickstats[0] < 269 && aa[0].electoral_votes > 269 && aa[0].candidate == 78) {
+        setImage("https://static01.nyt.com/images/2019/07/28/opinion/28kruseWeb/28kruseWeb-articleLarge.jpg?quality=75&auto=webp&disable=upscale");
+        return `<h3>By god! First time since George Wallace.</h3><p>The spirit of George Wallace has returned, as you have become the first third-party candidate to win states and electoral votes since Wallace's campaign in 1968. And let's be real, you and George had quite similar populist messages that appealed to the Christian right and the white working-class. <p>But all in all, it was still expected you would lose, even though you weren able to tip the election to the Democrats this time. In all seriousness though, most wonder how you were able to win a state this year considering Trump and Huckabee couldn't do it either time. Maybe you had more support than them this year? Or was there a different factor at play?`;
+    }        
+    if(quickstats[0] > 269 && quickstats[0] < 538) {
         setImage("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/the-tesla-ceo-was-spotted-wearing-a-black-maga-cap-along-with-a-gothic-looking-font-and-a-black-t--285945708-16x9_0.jpg?VersionId=9M..0a9LCG1Iia_hFfUvNEnsx_8O_Bw3");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+        return `<h3>Wrap your head around this.</h3><p>President Elon Musk. What the fuck? And how did this happen? Did you steal the election, or did people love you so much? Nobody knows, but not only is this the biggest upset in American presidential history, but also, this will likely go down as the craziest four years in the history of our country if in fact your election victory does get certified. <p>To you. Yes. You. The player. Behind the screen. Tell me how you were able to win as Elon Musk. Did you use Bigshot? Did you run the perfect campaign on Cakewalk? Will we ever know?</p>`;
     }
     if(quickstats[0] == 538) {
         setImage("https://ichef.bbci.co.uk/news/1024/cpsprodpb/9efa/live/d4746000-4278-11ef-9e1c-3b4a473456a6.jpg.webp");
-        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+        return `<h3>FIGHT! FIGHT! FIGHT!</h3><p>And so you did. They persecuted him. They took him off the ballot. They even tried to kill him. But He Kept Fighting until the end.<p>This is the greatest political movement in the history of our country, and America rose up. The radical establishment politicians have failed our country, and the people fought back. People hate being told what to do and how to live their lives by politicians, and this 538-0 landslide proves that conclusively. <p>The same movement that tried to steal the 2020 election on January 6th just four short years ago won every single electoral vote in the country, likely illegitimately...</p>`;
     }
 }
 
@@ -8911,81 +8919,8 @@ campaignTrail_temp.jet_data = [{
         "canImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Donald_Trump_2023_%28cropped%29.jpg",
         "runImage": "https://m.media-amazon.com/images/I/61MrMXTMeuL.jpg"
     },
-    "endings_enabled": true,
-    "ending_data": {
-        "1736911103733": {
-            "id": 1736911103733,
-            "variable": "1",
-            "operator": "==",
-            "value": 0,
-            "endingImage": "https://media.vanityfair.com/photos/58c02843208b4945c3920c8d/4:3/w_1280,h_960,c_limit/donald-trump-arnold-schwarzenegger-02.jpg",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "0"
-        },
-        "1736911111320": {
-            "id": 1736911111320,
-            "variable": "1",
-            "operator": ">",
-            "value": 0,
-            "endingImage": "",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "0"
-        },
-        "1736911115723": {
-            "id": 1736911115723,
-            "variable": "1",
-            "operator": ">",
-            "value": 0,
-            "endingImage": "",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "10"
-        },
-        "1736911118206": {
-            "id": 1736911118206,
-            "variable": "1",
-            "operator": ">",
-            "value": 0,
-            "endingImage": "",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "10"
-        },
-        "1736911125170": {
-            "id": 1736911125170,
-            "variable": "0",
-            "operator": ">",
-            "value": 0,
-            "endingImage": "https://whyy.org/wp-content/uploads/2024/12/donald-trump-elon-musk-2024-10-05-768x512.jpg",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "0"
-        },
-        "1736911131791": {
-            "id": 1736911131791,
-            "variable": 0,
-            "operator": ">",
-            "value": 0,
-            "endingImage": "",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "45"
-        },
-        "1736911152070": {
-            "id": 1736911152070,
-            "variable": 0,
-            "operator": ">",
-            "value": 0,
-            "endingImage": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202410/the-tesla-ceo-was-spotted-wearing-a-black-maga-cap-along-with-a-gothic-looking-font-and-a-black-t--285945708-16x9_0.jpg?VersionId=9M..0a9LCG1Iia_hFfUvNEnsx_8O_Bw3",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "270"
-        },
-        "1736911159763": {
-            "id": 1736911159763,
-            "variable": 0,
-            "operator": "==",
-            "value": 0,
-            "endingImage": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/9efa/live/d4746000-4278-11ef-9e1c-3b4a473456a6.jpg.webp",
-            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
-            "amount": "538"
-        }
-    }
+    "endings_enabled": false,
+    "ending_data": {}
 }
 ]
 

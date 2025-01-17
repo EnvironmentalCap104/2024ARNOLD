@@ -551,6 +551,12 @@ document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_wi
 
 //#endcode
 
+HistHexcolour=["#3d3dff","#ff2e2e","#ea47ff","#007000"];
+        HistName=["Andy Beshear","Lindsey Graham","Elon Musk", "Jill Stein"];
+        HistEV=[345,193,0,0];
+        HistPV=["73,594,895","64,551,454","14,968,453","2,806,585"];
+        HistPVP=["47.2%","41.4%","9.6%","1.8%"];
+
 var changeGameDisp = (hide) => {
   disp = "";
   if (hide) {
@@ -567,21 +573,25 @@ e.creditsPage = () => {
     <p>Environmental_Cap104</p>
     <h3>Misc.</h3>
     <p>DecstarG for the Music Player</p>
-    <p>Banner - u/thecupojo3</p>
+    <p>Banner - Environmental_Cap104</p>
+    <p>All Who Playtested and Troubleshooted</p>
     <h3>Music Credit</h3>
-    <p>JibJab.com - 2020 Year in Review</p>
-    <p>Luke Million - Ice Ice Arnie</p>
-    <p>Total Recall - The Dream</p>
-    <p>George Thorogood & The Destroyers - Bad to the Bone</p>
-    <p>Village People - Macho Man</p>
-    <p>ELO - Mr. Blue Sky</p>
-    <p>Journey - Only the Young</p>
-    <p>Survivor - Eye of the Tiger</p>
-    <p>Guns N' Roses - Welcome to the Jungle</p>
-    <p>Lee Greenwood - God Bless the U.S.A.</p>
-    <p>Natasha Owens - Trump Won</p>
-    <p>Kid Rock - American Badass</p>
-    <p>Village People - Y.M.C.A.</p><br><br>
+    <p>Jerry Goldsmith - The Parachutes</p>
+    <p>John Mellencamp - Small Town</p>
+    <p>Beyonce - Freedom</p>
+    <p>Jack Harlow - First Class</p>
+    <p>Taylor Swift - Cruel Summer</p>
+    <p>Sabrina Carpenter - Espresso</p>
+    <p>Brooks & Dunn - Only in America</p>
+    <p>Hank Williams Jr - A Country Boy Can Survive</p>
+    <p>Toby Keith - American Soldier</p>
+    <p>Billy Ray Cyrus - Some Gave All</p>
+    <p>Trace Adkins - Arlington</p>
+    <p>Kid Rock - We The People</p>
+    <p>Oliver Anthony - Rich Men North of Richmond</p>
+    <p>Sam & Dave - Hold On, I'm Coming</p>
+    <p>Andy Roberts - I've Never Met a Nice South African</p>
+    <p>Penelope Scott - Rät</p><br><br>
   `
   changeGameDisp(true);
   var spacer = document.createElement("amongusspacerthisisntarealelement");
@@ -839,8 +849,33 @@ var soundtracks = {
         "url": "https://audio.jukehost.co.uk/iJdVbEFbJwlx6GtM67GELJktHGCeDCol"
       },
     ]
-  },      
+  },
   1: {
+    name: "He Gave Much for America",
+    tracklist: [
+      {
+        "name": "Brooks & Dunn - Only in America",
+        "url": "https://audio.jukehost.co.uk/8XtO48kTRJBqN8hnaGXLysqCDAAC94iW"
+      },
+      {
+        "name": "Hank Williams Jr - A Country Boy Can Survive",
+        "url": "https://audio.jukehost.co.uk/TimqR4KslTF1xrv2JW6Co0nNu4Z38BNY"
+      },
+      {
+        "name": "Toby Keith - American Soldier",
+        "url": "https://audio.jukehost.co.uk/1DXVyOYkqyEH3VSCneBCGxVWWZodMhdG"
+      },
+      {
+        "name": "Billy Ray Cyrus - Some Gave All",
+        "url": "https://audio.jukehost.co.uk/jRD1WZKHQWXYk3o0aHNKOn9KqefVamiJ"
+      },    
+      {
+        "name": "Trace Adkins - Arlington",
+        "url": "https://audio.jukehost.co.uk/MHNNBVg5Z9eOqyKckIhN1IzPe9cTVaBf"
+      },      
+    ]
+  },      
+  2: {
     name: "Beshear Family Car Playlist",
     tracklist: [
       {
@@ -856,37 +891,12 @@ var soundtracks = {
         "url": "https://audio.jukehost.co.uk/BgLrOPaRPDG23Jrrp3BIHRMUhKfP7h3j"
       },
       {
+        "name": "Tyler Childers - In Your Love",
+        "url": "https://audio.jukehost.co.uk/0JHJcOSmnj9WngCn6u6AnzBYmt7xAzKf"
+      },      
+      {
         "name": "Taylor Swift - Cruel Summer",
         "url": "https://audio.jukehost.co.uk/hIQZyuTtrQyHLachSsQEqFhfTiaxEQi2"
-      },
-      {
-        "name": "Sabrina Carpenter - Espresso",
-        "url": "https://audio.jukehost.co.uk/rDuBPyGK53augOMuyJFuji64Sq0K0rwH"
-      },      
-    ]
-  },
-  2: {
-    name: "Carolina Country Tunes",
-    tracklist: [
-      {
-        "name": "Brooks & Dunn - Only in America",
-        "url": "https://audio.jukehost.co.uk/8XtO48kTRJBqN8hnaGXLysqCDAAC94iW"
-      },
-      {
-        "name": "Hank Williams Jr - A Country Boy Can Survive",
-        "url": "https://audio.jukehost.co.uk/TimqR4KslTF1xrv2JW6Co0nNu4Z38BNY"
-      },
-      {
-        "name": "Toby Keith - American Soldier",
-        "url": "https://audio.jukehost.co.uk/1DXVyOYkqyEH3VSCneBCGxVWWZodMhdG"
-      },
-      {
-        "name": "Fleetwood Mac - Gold Dust Woman",
-        "url": "https://audio.jukehost.co.uk/ffgKSZsE2MMv9DMl1GKxjJdbJGGHi6N0"
-      },    
-      {
-        "name": "Trace Adkins - Arlington",
-        "url": "https://audio.jukehost.co.uk/MHNNBVg5Z9eOqyKckIhN1IzPe9cTVaBf"
       },      
     ]
   },

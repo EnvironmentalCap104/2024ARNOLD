@@ -40,7 +40,7 @@ campaignTrail_temp.questions_json = [
         "pk": 349,
         "fields": {
             "priority": 2,
-            "description": "It is July 18th, 2024. You are about to walk on to the stage of the United Center in Chicago after such an eccentric convention. The roll-call was something, alright. There are pro-Palestinian demonstrations outside, but it's nothing like 1968 during the Vietnam War. You are about to deliver your acceptance speech for the Democratic nomination. What will be the main talking points?",
+            "description": "It is July 18th, 2024. After an eccentric convention at the United Center in Chicago, you're ready to walk on stage. Pro-Palestine demonstrators are outside, but it's nothing like the 'Nam protests of yesteryear. You're about to deliver your acceptance speech. What are your main talking points?",
             "likelihood": 1
         }
     },
@@ -360,7 +360,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3333,
         "fields": {
             "question": 349,
-            "description": "We have so much more in common than what separates us. The Democrats are the big tent party, while the Republicans are divided and they bicker at each other. It is important that we talk about the issues that we all care about, and after a long primary, we need to bring the party together unlike the Republicans."
+            "description": "We have so much more in common than what separates us. The Democrats are the big tent party, while the Republicans are divided. Let's talk about the issues that we all care about and bring the party together unlike the Republicans."
         }
     },
     {
@@ -760,7 +760,7 @@ campaignTrail_temp.answers_json = [
         "pk": 12275,
         "fields": {
             "question": 349,
-            "description": "We are all Democrats, and it is important to focus on the issues we all agree upon as a party. I will fight to protect a woman's right to make her own healthcare decisions, protect the rights of our LGBTQ youth and adults, bring down prices and inflation, end the war in Gaza once and for all, and reform our broken immigration system."
+            "description": "Let's talk about the core Democratic issues. I will fight to protect reproductive freedom and the rights of our LGBTQ youth and adults, bring down prices and inflation, protect our allies in Ukraine and the Middle East, and reform our broken immigration system."
         }
     },
     {
@@ -8980,15 +8980,7 @@ endingPicker = (out, totv, aa, quickstats) => {
     if(aa[0].electoral_votes > 269 && aa[0].candidate == 79) {
         setImage("https://media3.giphy.com/media/S43RIQ4OtWGKMTyU8q/giphy.gif?cid=6c09b952cbwj07sz56woivka6ft386vz0hoze2i9exoilo3u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g");
         return `<h3>What the fuck? President Elon Musk?!?</h3><p>The entire nation is stunned beyond belief right now. Not only did you lose a very winnable election for Democrats, but Elon Musk won the election. He becomes the second consecutive naturalized citizen to become President, as well as the first without government or military experience and the first third-party candidate since the 1800s to become President. How on earth did this happen? And how did you allow this to happen? <p>There are two words that are floated around here. They are "bigshot" and "spacebar", and nobody knows the context of them. Maybe there will be more to say later.</p>`;
-    }	    
-    if(aa[0].electoral_votes > 269 && aa[0].candidate == 78 && ans == 3501) {
-        setImage("https://michiganadvance.com/wp-content/uploads/2022/11/AMR0437-2048x1365.jpg");
-        return `<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>Without you in the primaries, Michigan Governor Gretchen Whitmer was able to win the 2024 Democratic primaries, as well as the presidential election. Therefore, she will not only become the 46th President of the United States, but she will also be the first female President. Most can say this was expected, although the shadow of Hillary Clinton's ill-fated campaign eight years ago still lived strong. <p>Most Americans were ready for a change after eight years of Arnold Schwarzenegger as President, and Lindsey Graham wasn't popular especially with a split Republican Party. Alongside Whitmer, Connecticut Senator Chris Murphy will become the 49th Vice President of the United States. Democrats have a trifecta in Washington, and are ready to pass as much legislation as they can before the expected red wave of 2026.</p>`;
-    }     
-    if(aa[0].electoral_votes < 269 && aa[0].candidate == 78 && ans == 3501) {
-        setImage("https://i.guim.co.uk/img/media/9d13b67c5c6cdaa594956295ae4884d9ca7b4441/129_0_3342_2005/master/3342.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=b8b99e9127e11f368d5f541ef95fa69e");
-        return `<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>The shadow of Hillary Clinton's campaign from 2016 has only manifested itself. It just seems like women just don't have any luck running for President, and many wonder why. Is there just a sense of misogyny in this country that nobody recognizes? Are the female candidates so bad in America? Or was the Schwarzenegger administration just so popular that allowed for an unpopular Lindsey Graham to get elected the 46th President of the United States? <p>Whatever the case, many Democrats are very disappointed that you didn't run, considering that you had red-state appeal and could've easily defeated Graham across the Midwest and even some Southern states. But you still have work to do back home, and maybe you'll run in 2028.</p>`;
-    }         
+    }	            
 }
 
 
@@ -9024,9 +9016,19 @@ cyoAdventure = function (a) {
     }     
     if(ans == 3501){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Gretchen";
+        campaignTrail_temp.candidate_last_name = 'Whitmer';
+        campaignTrail_temp.candidate_image_url = 'https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-9lohmm01efsd1.png?width=640&crop=smart&auto=webp&s=4bc651e3a78dd4d6c127e9122187bd7a475467b8';
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Whitmer";
-        campaignTrail_temp.question_number = 24;
-}
+        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-9lohmm01efsd1.png?width=640&crop=smart&auto=webp&s=4bc651e3a78dd4d6c127e9122187bd7a475467b8";
+campaignTrail_temp.running_mate_state_id = '187';
+campaignTrail_temp.running_mate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Sen_Chris_Murphy_in_2023.jpg';
+campaignTrail_temp.running_mate_last_name = 'Murphy';
+
+        campaignTrail_temp.candidate_json[1]["fields"].electoral_victory_message = "<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>Without you in the primaries, Michigan Governor Gretchen Whitmer was able to win the 2024 Democratic primaries, as well as the presidential election. Therefore, she will not only become the 46th President of the United States, but she will also be the first female President. Most can say this was expected, although the shadow of Hillary Clinton's ill-fated campaign eight years ago still lived strong. <p>Most Americans were ready for a change after eight years of Arnold Schwarzenegger as President, and Lindsey Graham wasn't popular especially with a split Republican Party. Alongside Whitmer, Connecticut Senator Chris Murphy will become the 49th Vice President of the United States. Democrats have a trifecta in Washington, and are ready to pass as much legislation as they can before the expected red wave of 2026.</p>";
+        campaignTrail_temp.candidate_json[1]["fields"].electoral_loss_message = "<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>The shadow of Hillary Clinton's campaign from 2016 has only manifested itself. It just seems like women just don't have any luck running for President, and many wonder why. Is there just a sense of misogyny in this country that nobody recognizes? Are the female candidates so bad in America? Or was the Schwarzenegger administration just so popular that allowed for an unpopular Lindsey Graham to get elected the 46th President of the United States? <p>Whatever the case, many Democrats are very disappointed that you didn't run, considering that you had red-state appeal and could've easily defeated Graham across the Midwest and even some Southern states. But you still have work to do back home, and maybe you'll run in 2028.</p>";
+  campaignTrail_temp.multiple_endings=false
+         campaignTrail_temp.question_number = 24;
+    }
     if(ans == 3316 || ans == 3317){
         campaignTrail_temp.candidate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Andy_Beshear_2024_%28cropped%29.jpg/330px-Andy_Beshear_2024_%28cropped%29.jpg';
         campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/kHfHkZk.png"

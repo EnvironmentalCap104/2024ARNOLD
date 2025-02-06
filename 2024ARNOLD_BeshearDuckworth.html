@@ -8927,19 +8927,28 @@ campaignTrail_temp.running_mate_image_url = "https://wpcdn.us-east-1.vip.tn-clou
 campaignTrail_temp.candidate_last_name = "Beshear";
 campaignTrail_temp.running_mate_last_name = "Coleman";
 
-campaignTrail_temp.multiple_endings = true;
-endingPicker = (out, totv, aa, quickstats) => {
+e.multiple_endings = true;
 
-    function setImage(url) {
-        if(url == '' || url == null) return;
-        let interval = setInterval(function () {
-            img = document.getElementsByClassName("person_image")[0];
-            if (img != null) {
-                img.src = url;
-                clearInterval(interval);
-            }
-        }, 50);
-    }
+e.header = "<h1>error</h1>";
+e.pages = ["<p>This is an error handler</p>"];
+e.page = 0;
+
+endingPicker = (out, totv, aa, quickstats) => {
+    orderID = [aa[0].candidate, aa[1].candidate, aa[2].candidate, aa[3].candidate];
+//out = "win", "loss", or "tie" for your candidate
+//totv = total votes in entire election
+//aa = all final overall results data
+//quickstat = relevant data on candidate performance (format: your candidate's electoral vote count, your candidate's popular vote share, your candidate's raw vote total)
+
+/*
+e.header = "<h2></h2>"
+e.pages = ["<p></p>",
+        "<p></p>"]
+*/
+e.pages = []
+e.header = "";
+e.executable = []
+nct_stuff.themes[nct_stuff.selectedTheme].text_col = "black"
 
     if(aa[0].electoral_votes == 0 && aa[0].candidate == 78) {
         setImage("https://atomicjunkshop.com/wp-content/uploads/2019/11/Terminator-Orion.jpg");
@@ -8980,7 +8989,12 @@ endingPicker = (out, totv, aa, quickstats) => {
     if(aa[0].electoral_votes > 269 && aa[0].candidate == 79) {
         setImage("https://media3.giphy.com/media/S43RIQ4OtWGKMTyU8q/giphy.gif?cid=6c09b952cbwj07sz56woivka6ft386vz0hoze2i9exoilo3u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g");
         return `<h3>What the fuck? President Elon Musk?!?</h3><p>The entire nation is stunned beyond belief right now. Not only did you lose a very winnable election for Democrats, but Elon Musk won the election. He becomes the second consecutive naturalized citizen to become President, as well as the first without government or military experience and the first third-party candidate since the 1800s to become President. How on earth did this happen? And how did you allow this to happen? <p>There are two words that are floated around here. They are "bigshot" and "spacebar", and nobody knows the context of them. Maybe there will be more to say later.</p>`;
-    }	            
+    }
+    if ((e.player_answers.includes(3501)) && aa[0].electoral_votes > 269 && aa[0].candidate == 78) {
+    e.pages.push(`<h3>Here to Serve</h3>
+              <p>There was screaming inside the Reagan Building in Downtown DC. First the South had fallen. Then the Great Plains. Great splotches of red spread across the map, conquest after conquest, victory after victory. They felt themselves on the edge of a precipice and then, finally, shortly past midnight, they passed it. There were still votes to be counted, ballot boxes to be retrieved, but according to their projections: George W. Bush and Dick Cheney had won re-election. There were whistles like falling rockets. Each round of applause was sharp and percussive. The masses waved their flags.<br><br>He could hear the roars from his green room and felt a certain sense of satisfaction from the triumph. After all, their victory had been far from assured two years ago. Back then, it seemed as though the entire country were coming apart, as if all they had fought for would be lost. It had taken a skilled captain to right the ship of state, to navigate through the rocks of scandal and stupidity, but he had done it. Dick Cheney had found a  weak-willed wisp of a man and turned him into a conqueror. <br><br>Dick allowed himself a brief moment to imagine his running mate scurrying about his green room, soaking in the adulation. He imagined him calling his “Poppy”—a babyish name—and presenting the victory to him like a child presenting a report card. Didn’t I do such a good job? Aren’t you proud of me, Poppy?    <br><br>He snorted at his own joke and then, rising from his chair, flipped open his Blackberry. There was a short ring, followed by a click.<br><br>“I suppose congratulations are in order, Dick,” said the voice on the other end of the receiver.<br><br>“Yeah, I guess so,” he grunted. “Listen, Paul, once things settle down, I want to make sure we can set up a meeting to discuss the Russia business.”<br><br>He paused as a particularly loud round of cheers exploded in the distant auditorium.<br>“Putin hasn’t, uh, caused too much trouble for us, but I think you and I both know he’s not going to stay content in his playpen for long.”<br><br>Dick listened to the sound of Wolfowitz moving around his study, muting a television. “I uhh… I suppose that would probably be a good idea, Dick.” There was a light chuckle. “After Afghanistan. The whole UN thing. He hasn’t been willing to play ball.”<br><br>“I don’t think he realizes what a favor he did us by tearing up that Arms Treaty.” Dick adjusted his glasses. “Let’s plan for something sometime next week with the usual group. Ari. Rumsfeld. McNally. I want us to get things in order for the…” He cleared his throat. “Final victory.”<br><br>There was scribbling on the other end of the receiver. “Sure, sure. Shouldn’t be too hard. Do you want to finally loop in George on this?”<br><br>Dick Cheney paused for a moment while he pretended to think. “No, I don’t think we should worry him about this yet. He’s going to want to take some time for a victory lap. Let’s, uh, keep the lights on for him.” Dick looked at his watch. “Anyways, I should probably get going to handle the lunatics here. Don’t stay up too late, Paul.”<br><br>“Only long enough to watch you both accept your victory. Good night, Dick.”<br><br>There was a click as the call ended. Alone in his dressing room, Dick allowed himself a moment to straighten his tie and pull back his shoulders. He tried to make himself look as powerful as he felt before swinging open the door to his green room and striding towards his smiling wife, children, and grandchildren. They were effusive with praise, talking about his victory over Sharpton, but he was already thinking about his next great victory. He was still thinking about it as he stepped out before the screaming crowd. He could almost see it in their rapt, attentive faces.<br><br>He was sure he was the only one who could.</p>`)
+    e.executable.push([0, (() => {e.image = e.image = 'https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-9lohmm01efsd1.png?width=640&crop=smart&auto=webp&s=4bc651e3a78dd4d6c127e9122187bd7a475467b8'})]);
+    }      
 }
 
 
@@ -9023,10 +9037,6 @@ cyoAdventure = function (a) {
 campaignTrail_temp.running_mate_state_id = '187';
 campaignTrail_temp.running_mate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Sen_Chris_Murphy_in_2023.jpg';
 campaignTrail_temp.running_mate_last_name = 'Murphy';
-
-        campaignTrail_temp.candidate_json[1]["fields"].electoral_victory_message = "<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>Without you in the primaries, Michigan Governor Gretchen Whitmer was able to win the 2024 Democratic primaries, as well as the presidential election. Therefore, she will not only become the 46th President of the United States, but she will also be the first female President. Most can say this was expected, although the shadow of Hillary Clinton's ill-fated campaign eight years ago still lived strong. <p>Most Americans were ready for a change after eight years of Arnold Schwarzenegger as President, and Lindsey Graham wasn't popular especially with a split Republican Party. Alongside Whitmer, Connecticut Senator Chris Murphy will become the 49th Vice President of the United States. Democrats have a trifecta in Washington, and are ready to pass as much legislation as they can before the expected red wave of 2026.</p>";
-        campaignTrail_temp.candidate_json[1]["fields"].electoral_loss_message = "<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>The shadow of Hillary Clinton's campaign from 2016 has only manifested itself. It just seems like women just don't have any luck running for President, and many wonder why. Is there just a sense of misogyny in this country that nobody recognizes? Are the female candidates so bad in America? Or was the Schwarzenegger administration just so popular that allowed for an unpopular Lindsey Graham to get elected the 46th President of the United States? <p>Whatever the case, many Democrats are very disappointed that you didn't run, considering that you had red-state appeal and could've easily defeated Graham across the Midwest and even some Southern states. But you still have work to do back home, and maybe you'll run in 2028.</p>";
-  campaignTrail_temp.multiple_endings=false
          campaignTrail_temp.question_number = 24;
     }
     if(ans == 3316 || ans == 3317){

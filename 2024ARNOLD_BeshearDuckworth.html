@@ -8946,118 +8946,129 @@ endingPicker = (out, totv, aa, quickstats) => {
                     }
                 }, 100);
             }
-    return "<h3>Fight! Fight! Fight!</h3><p>The election has been deadlocked for one of two reasons: Both you and Graham received 269 electoral votes, or Elon Musk was able to win enough states and deadlock the election in some way, shape, or form. <p>Right outside the Capitol in the same spot there were insurrectionists four years ago, there are fists up in the air. <p> "Fight! Fight! Fight!" shout the demonstrators. <p>Fight to put Elon Musk and Vivek Ramaswamy into the White House. You are so fed up with it that you just hope the constitutional process plays out as intended. <p>Nevertheless, it's impossible to say who's going to win the presidency. But the vote splitting among Republicans makes it seem like you have the advantage, especially considering your party has both houses of Congress. Good luck, Governor Beshear.</p>"
-  } else if ((campaignTrail_temp.player_answers[0] == 3501) && quickstats[0] > 269) {
+    return "<h3>Fight! Fight! Fight!</h3><p>The election has been deadlocked for one of two reasons: Both you and Graham received 269 electoral votes, or Elon Musk was able to win enough states and deadlock the election in some way, shape, or form. <p>Right outside the Capitol in the same spot there were insurrectionists four years ago, there are fists up in the air. <p> \"Fight! Fight! Fight!\" shout the demonstrators. <p>Fight to put Elon Musk and Vivek Ramaswamy into the White House. You are so fed up with it that you just hope the constitutional process plays out as intended. <p>Nevertheless, it's impossible to say who's going to win the presidency. But the vote splitting among Republicans makes it seem like you have the advantage, especially considering your party has both houses of Congress. Good luck, Governor Beshear.</p>"
+  } else if ((campaignTrail_temp.player_answers[0] == 3501) && aa[0].electoral_votes > 269 && aa[0].candidate == 78) {
         if (used != true) {
             setInterval(function () {
                 used = true;
                 imgg = document.getElementsByClassName("person_image")[0];
                 if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/NtpRSXO.jpg";
+                    imgg.src = "https://michiganadvance.com/wp-content/uploads/2022/11/AMR0437-2048x1365.jpg";
                 }
             }, 100);
         }
-    return "<h3>A Mormon President</h3><p>Vice President George Romney will be moving out of the Naval Observatory and into the White House. Campaigning on Reagan’s achievements, he has promised time and time again to uphold the president’s policies. Still, though, many believe that he will moderate extensively as soon as his lips speak “So help me God”. Conservatives are already beginning to grumble amongst themselves.</p><p>And with a Vice President like George Bush, who isn’t the most conservative of the Republican bunch, this can only serve to potentially complicate matters as the duo takes their oaths in January.</p><p>However, don’t think Romney won’t be kept in check.</p><p>A new Buckley has joined the conservative media scene; the older brother of Bill Buckley Jr., James Buckley.</p>"
-    } else if ((campaignTrail_temp.player_answers[0] == 3501) && quickstats[0] < 269) {
+    return "<h3>GRETCHEN WHITMER ELECTED 46TH PRESIDENT</h3><p>Without you in the primaries, Michigan Governor Gretchen Whitmer was able to win the 2024 Democratic primaries, as well as the presidential election. Therefore, she will not only become the 46th President of the United States, but she will also be the first female President. Most can say this was expected, although the shadow of Hillary Clinton's ill-fated campaign eight years ago still lived strong. <p>Most Americans were ready for a change after eight years of Arnold Schwarzenegger as President, and Lindsey Graham wasn't popular especially with a split Republican Party. Alongside Whitmer, Connecticut Senator Chris Murphy will become the 49th Vice President of the United States. Democrats have a trifecta in Washington, and are ready to pass as much legislation as they can before the expected red wave of 2026.</p>"
+    } else if ((campaignTrail_temp.player_answers[0] == 3501) && aa[0].electoral_votes < 269 && aa[0].candidate == 78) {
         if (used != true) {
             setInterval(function () {
                 used = true;
                 imgg = document.getElementsByClassName("person_image")[0];
                 if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/nNVK7Mc.jpg";
+                    imgg.src = "https://i.guim.co.uk/img/media/9d13b67c5c6cdaa594956295ae4884d9ca7b4441/129_0_3342_2005/master/3342.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=b8b99e9127e11f368d5f541ef95fa69e";
                 }
             }, 100);
         }
-    return "<h3>Out With Romney, In With Scoop</h3><p>The Vice President has lost to Senator Henry Jackson of Washington. While most assumed the White House would see a Democrat moving in, this loss still stings for the GOP, especially with someone so closely aligned to the Reagan Administration as the nominee.</p><p>It’s safe to say that while President-elect Jackson will bring a liberal flair to the domestic scene, he is likely to uphold most of the Reagan Doctrine in regards to foreign policy.</p><p>As for the Vice President Romney, Mr. Romney has stated his intentions to retire from politics and spend time with his family.</p>"
-  } else if (quickstats[0] > 270) {
+    return "<h3>VICE PRESIDENT GRAHAM DEFEATS WHITMER, BECOMING 46TH PRESIDENT</h3><p>The shadow of Hillary Clinton's campaign from 2016 has only manifested itself. It just seems like women just don't have any luck running for President, and many wonder why. Is there just a sense of misogyny in this country that nobody recognizes? Are the female candidates so bad in America? Or was the Schwarzenegger administration just so popular that allowed for an unpopular Lindsey Graham to get elected the 46th President of the United States? <p>Whatever the case, many Democrats are very disappointed that you didn't run, considering that you had red-state appeal and could've easily defeated Graham across the Midwest and even some Southern states. But you still have work to do back home, and maybe you'll run in 2028.</p>"
+  } else if (aa[0].electoral_votes == 538) {
         if (used != true) {
             setInterval(function () {
                 used = true;
                 imgg = document.getElementsByClassName("person_image")[0];
                 if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/5U0pNix.jpg";
+                    imgg.src = "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2023-11/231117-capitol-riot-mn-1615-f75577.jpg";
                 }
             }, 100);
         }
-    return "<h3>Nixon Now: 16 Years Later</h3><p>The long journey to the presidency has finally culminated in triumph for the former Vice President and current National Security Advisor. After bowing out of what would’ve been an easy nomination in 1968, Dick let the actor get his go. Now, the elder statesman bested his opponents in the primary and then Ted Kennedy in the general election.</p><p>Nixon is known to have an independent streak, bucking the consensus. So it’s uncertain if the man will stick to established Reaganite orthodoxy. Nonetheless, the party is his now and he can move it in nearly any direction he pleases.</p>"
-    } else if (quickstats[0] < 269) {
+    return "<h3>Oh, No. No. Not Again.</h3><p>It is January 6th, 2025. You are watching C-SPAN on your computer as the election is being certified, and you are in shock as to what sound you hear. <p>A banging noise, just like what was heard on that dark day four years ago. There are insurrectionists, and even more than four years ago. Here we go again. But the person who came up to the podium wasn't who you expected. Donald Trump himself went into the Capitol with a gun in his hand and said these famous words to the Vice President. \"Hasta la vista, baby\". <p>Before he could shoot, one of his supporters lit a match and now the fire alarms are beeping loudly. A couple of Congressmen died along with more police officers and firefighters. <p>Did we just witness the end of democracy in the United States as we know it? Was your 538-0 landslide even legitimate? Who knows...</p>"
+  } else if (aa[0].electoral_votes > 379 && aa[0].electoral_votes < 538 && aa[0].candidate == 78) {
         if (used != true) {
             setInterval(function () {
                 used = true;
                 imgg = document.getElementsByClassName("person_image")[0];
                 if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/orjkV7k.png";
+                    imgg.src = "https://images.wsj.net/im-972227?width=1260&height=867";
                 }
             }, 100);
         }
-    return "<h3>Camelot Strikes Again</h3><p>The final blow to a prestigious career. Dick Nixon was elected vice president twice, sure, but his main legacy-defining moment was the 1960 election. He needed that victory badly. Alas, it never came, with that Kennedy boy serving Nixon’s ass on a silver platter. He never got over that. Never.</p><p>Yet, 1968 came and went and still…he never decided to run. For whatever reason it might’ve been, only Dick and the Lord knows. Yet, Reagan gave him a decent position in the Cabinet, a surprise to a now-elder statesman like the man was. Still, Dick could not shake that 1960 loss. He felt as if he needed to redeem himself.</p><p>So, 1976 arrived and the boy from Yorba Linda threw his hat into the ring. He won the primary and was pitted up against…another Kennedy. Dear God. And just like sixteen years prior, the man was defeated. Again.</p><p>It seemed as if God was laughing at him. Cursing him. For whatever reason.</p><p>It’s all over now.</p>"
-  } else if (quickstats[0] == 538) {
-        if (used != true) {
-            setInterval(function () {
-                used = true;
-                imgg = document.getElementsByClassName("person_image")[0];
-                if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/3JTorXB.jpg";
-                }
-            }, 100);
-        }
-    return "<h3>Buckley prevails! Conservatism reins supreme</h3><p>When the news broke, you couldn't believe it. You actually destroyed Reubin in the electoral college. You've done good to replicate the legacy of Reagan.</p><p>Wait... wait a minute. You've did more than what Reagan achieved. You've absolutely destroyed Askew in the electoral college and the popular vote. A <i>time for champagne</i> could not be better asked.</p><p>With this, you've definitely done more than continue the legacy of Reagan. This presidency is yours, all yours. It's time to play with the mold and make a legacy better than Reagan's.</p>"
-  } else if (quickstats[0] > 339 && quickstats[0] < 538) {
-        if (used != true) {
-            setInterval(function () {
-                used = true;
-                imgg = document.getElementsByClassName("person_image")[0];
-                if (imgg != null) {
-                    imgg.src = "https://i.imgur.com/fgwV3Ux.jpg";
-                }
-            }, 100);
-        }
-    return "<h3>Conservatism marches on!</h3><p>You have done it, James. You have secured a victory for the ages. Not only have you vindicated President Reagan and his administration, but you have taken up the mantle as the new leader of American conservatism.</p><p>It’s up to you now, my dear brother. You can either choose to follow in Reagan’s footsteps or chart your own course, the Buckley way. Knowing you, you might choose the latter. Nonetheless, this victory is revolutionary and will go down in the history books.</p><p>You have made myself, but more importantly our mother and father, extremely proud.</p><p>Your brother,</p><p>Bill</p>"
-  } else if (quickstats[0] > 269 && quickstats[0] < 340) {
+    return "<h3>The Southern Democrats are back. Resoundingly.</h3><p>This was the biggest victory for a Democrat since Lyndon Johnson in 1964, and was even better than Barack Obama in 2008 and Bill Clinton in both 1992 and 1996. Republicans are in absolute shambles right now, but they got what they deserved for constantly bickering at each other and dividing itself into factions. There is a lot of discourse over whether or not America is on track for a political realignment back towards the 1990s, considering that you've won states that haven't been won since then or even earlier. <p>While your father Steve is still bitter over his 1996 loss to Mitch McConnell, he is happy that he served as Governor before you and is deeply proud of you over your accomplishment tonight. Standing next to you as you deliver your victory speech, he can't help but cry as you thank him for all of his support and advice, as you're able to do more than what he was ever able to accomplish as Governor.</p>"
+  } else if (aa[0].electoral_votes > 332 && aa[0].electoral_votes < 380 && aa[0].candidate == 78) {
     if (used != true) {
         setInterval(function () {
             used = true;
             imgg = document.getElementsByClassName("person_image")[0];
             if (imgg != null) {
-                imgg.src = "https://i.imgur.com/eP7yuFZ.png";
+                imgg.src = "https://npr.brightspotcdn.com/dims4/default/1867f3e/2147483647/strip/true/crop/2500x1668+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F75%2F88%2F00f17d2341049c5448edd61c074b%2F231107-election-night-andy-beshear-by-j-tyler-franklin-4.jpg";
             }
         }, 100);
     }
-  return "<h3>It’s the Buckley way</h3><p>A thrilling race, right to the end. The road to victory was paved with hardships, but you did it James. Although a narrow victory, a win is still a win. Now, it’s entirely up to you what you will do come January. But, I know you will add the Buckley flair this nation will come accustomed to these next four years.</p><p>Now go, make due on your promises of fixing the economy and keeping America’s interests protected abroad. The Red Menace is yours to tackle now, but it seems like you won’t have to for long. Anyway, you’ll get your briefing in the morning. For now, relish in your victory. I’ll be here with you.</p><p>Godspeed brother and good luck.</p><p>Your brother,</p><p>Bill</p>"
-  } else if (quickstats[0] > 210 && quickstats[0] < 269) {
+  return "<h3>This is an astounding victory.</h3><p>This was the first line of your victory speech that you deliver in front of a large crowd on the Great Lawn in Louisville. It is about 1:30 in the morning, and your wins in Ohio and Pennsylvania have delivered you the presidency. <p>Your father Steve stands next to you and is tearing up as you deliver your speech. Your party does have control of both houses of Congress, giving you all of the momentum and power to do whatever you want when you get sworn in on January 20th.<p>2024 is a lot like 2008 for the Democrats, considering that the Republican Party is very unpopular and the Democrats were able to score some impressive wins this year, even in states that Obama didn't win twice. Now it's time to get the work done, as you move from Louisville, Kentucky to become the 46th President of the United States.</p>"
+  } else if (aa[0].electoral_votes > 269 && aa[0].electoral_votes < 333 && aa[0].candidate == 78) {
     if (used != true) {
         setInterval(function () {
             used = true;
             imgg = document.getElementsByClassName("person_image")[0];
             if (imgg != null) {
-                imgg.src = "https://i.imgur.com/UsnZhlK.png";
+                imgg.src = "https://npr.brightspotcdn.com/dims4/default/1867f3e/2147483647/strip/true/crop/2500x1668+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F75%2F88%2F00f17d2341049c5448edd61c074b%2F231107-election-night-andy-beshear-by-j-tyler-franklin-4.jpg";
             }
         }, 100);
     }
-    return "<h3>The End?</h3><p>I’m so sorry, James. I know you wanted a different outcome. I did too. We must…move on from this. With your new stature, despite the loss, your career is certainly far from over. While you might not be President or Senator come January, your options are still plenty.</p><p>Whatever you do, I’ll remain by your side. Perhaps, you could run again in 1980. But knowing you, your days in presidential politics are likely over. I’m sure you don’t want to go through it again, and I don’t blame you.</p><p>Stay strong, brother.</p><p>Yours truly,</p><p>Bill</p>"
-  } else if (quickstats[0] > 0 && quickstats[0] < 211) {
+  return "<h3>ANDY BESHEAR ELECTED 46TH PRESIDENT</h3><p>Well done, Governor. You have defeated both Vice President Lindsey Graham and Elon Musk to be elected the 46th president of the United States. You didn't do as well as Obama did in 2012, but your win here was expected nonetheless by political analysts and Allan Lichtman. This is because we had a divided Republican party for eight years, and party fatigue just kicked in again in 2024.<p>The Democrats have retained their control of both the House and Senate, giving you a trifecta in January. Let's get to work! </p>"     
+  } else if (aa[0].electoral_votes > 199 && aa[0].electoral_votes < 269 && aa[0].candidate == 78) {
     if (used != true) {
         setInterval(function () {
             used = true;
             imgg = document.getElementsByClassName("person_image")[0];
             if (imgg != null) {
-                imgg.src = "https://i.imgur.com/V0gKzcr.jpg";
+                imgg.src = "https://www.hollywoodreporter.com/wp-content/uploads/2017/08/arnold_schwarzenegger.jpg?w=1296&h=730&crop=1";
             }
         }, 100);
     }
-    return "<h3>A Light Snuffed Out</h3><p>We were repudiated that bad, huh? Jesus Christ. This more than stings. I know you feel worse, James. I’m not sure what we did wrong, but whatever it was, liberalism has snuffed out the light of conservatism. Is it forever? Is it temporary? Who knows at this point.</p><p>Prepare your concession speech. Deliver it with grace and eloquence. After that, get some rest. You fought hard, but things like this always happen in politics.</p><p>Yours truly,</p><p>Bill</p>"
-    } else if (quickstats[0] == 0) {
+    return "<h3>The Presidator's Legacy Continues</h3><p>Although you did put up a good fight, it just wasn't enough to make you the 46th President of the United States. It was quite a shocker too, especially considering that Vice President Graham was personally unpopular and was bogged down by Elon Musk's third-party campaign. Was the President just popular enough that he propelled Graham across the finish line? Or was it an issue on your end? <p>Whatever the case, that is for your team and party to figure out. Rumor has it that progressives weren't happy with your campaign, especially with your moderate views and your lack of toughness on the issue of Gaza. Your loss was close enough to where you could hypothetically try again in 2028 if you wanted, or you can try to get back into statewide Kentucky politics, which will be quite hard unfortunately. Maybe a run for Senate in 2026 could be on the books? </p>"
+  } else if (aa[0].electoral_votes > 112 && aa[0].electoral_votes < 200 && aa[0].candidate == 78) {
     if (used != true) {
         setInterval(function () {
             used = true;
             imgg = document.getElementsByClassName("person_image")[0];
             if (imgg != null) {
-                imgg.src = "https://i.imgur.com/9zk5PcN.png";
+                imgg.src = "https://www.hindustantimes.com/ht-img/img/2024/11/07/1600x900/US_1730948623505_1730948623674.webp";
             }
         }, 100);
     }
-    return "<h3>I’d Like To Apologize…</h3><p>It’s over. The west has fallen. You guys ruined my Campaign Trail career.</p><p>Yours truly,</p><p>Bill</p>"
-  } else {
+    return "<h3>What the hell happened to the Thirteen Keys?!?</h3><p>That is the question that is flooding certain Reddit channels right now, including r/yapms and r/thecampaigntrail to name a few. Most believed Allan Lichtman's prophecy that you would win the election due to the Thirteen Keys to the White House model, but that didn't happen. Matter of fact, you did worse than Hillary Clinton, making your performance the worst for a Democrat since Michael Dukakis in 1988. <p>Political analysts are scratching their heads as to how on earth this loss happened, considering that this was supposed to be the perfect storm for the Democrats to win back the White House. Nevertheless, your political career is likely done, and you can go back to Louisville to have a peaceful life out of the spotlight with Britainy and your kids.</p>"
+  } else if (aa[0].electoral_votes > 0 && aa[0].electoral_votes < 113 && aa[0].candidate == 78) {
+    if (used != true) {
+        setInterval(function () {
+            used = true;
+            imgg = document.getElementsByClassName("person_image")[0];
+            if (imgg != null) {
+                imgg.src = "https://i.imgur.com/8o3zggN.png";
+            }
+        }, 100);
+    }
+    return "<h3>Andy... it's Michael Dukakis on the phone.</h3><p>He gives you a call, and he gives you tips on how to deal with the fact that you lost worse than he did in 1988. He tells you about this crazy game on how you could simulate a presidential campaign. It's called \"The Campaign Trail\", and you are eagerly waiting for the 2024 mod to release so you can retry your campaign and win. <p>You check the r/thecampaigntrail subReddit every day for months until this mod comes out, and you see a lot of alternate history mods. For instance, what would 2024 look life if Donald Trump won the 2016 election and lost in 2020 to Vice President Joe Biden? You get invested in this game nonetheless, and now your kids are in to it as well.</p>"
+    } else if (aa[0].electoral_votes == 0 && aa[0].candidate == 78) {
+    if (used != true) {
+        setInterval(function () {
+            used = true;
+            imgg = document.getElementsByClassName("person_image")[0];
+            if (imgg != null) {
+                imgg.src = "https://atomicjunkshop.com/wp-content/uploads/2019/11/Terminator-Orion.jpg";
+            }
+        }, 100);
+    }
+    return "<h3>Hasta la vista, baby!</h3><p>When you get a knock on the door, you open it. Then you find President Schwarzenegger dressed up as the Terminator with a gun ready to shoot you. Right as he's about to shoot, he says his famous catchphrase and then pulls the trigger. <p>Britainy walks in the room and sees you dead on the floor. \"What the fuck are you doing here, Mr. President?\" she yells. <p>\"Put the cookie down,\" says the President. \"You're next. My colleague terminated you in the election, and he sent me here to finish the job.\"</p>"
+    } else if (aa[0].electoral_votes > 269 && aa[0].candidate == 79) {
+    if (used != true) {
+        setInterval(function () {
+            used = true;
+            imgg = document.getElementsByClassName("person_image")[0];
+            if (imgg != null) {
+                imgg.src = "https://media3.giphy.com/media/S43RIQ4OtWGKMTyU8q/giphy.gif?cid=6c09b952cbwj07sz56woivka6ft386vz0hoze2i9exoilo3u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g";
+            }
+        }, 100);
+    }
+    return "<h3>What the fuck? President Elon Musk?!?</h3><p>The entire nation is stunned beyond belief right now. Not only did you lose a very winnable election for Democrats, but Elon Musk won the election. He becomes the second consecutive naturalized citizen to become President, as well as the first without government or military experience and the first third-party candidate since the 1800s to become President. How on earth did this happen? And how did you allow this to happen? <p>There are two words that are floated around here. They are \"bigshot\" and \"spacebar\", and nobody knows the context of them. Maybe there will be more to say later.</p>"
+    } else {
     return "<h3>Oof</h3<p><FUCK</p>"
   }
 }
@@ -9097,14 +9108,8 @@ cyoAdventure = function (a) {
     }     
     if(ans == 3501){
         campaignTrail_temp.candidate_json[1]["fields"].first_name = "Gretchen";
-        campaignTrail_temp.candidate_last_name = 'Whitmer';
-        campaignTrail_temp.candidate_image_url = 'https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-9lohmm01efsd1.png?width=640&crop=smart&auto=webp&s=4bc651e3a78dd4d6c127e9122187bd7a475467b8';
         campaignTrail_temp.candidate_json[1]["fields"].last_name = "Whitmer";
-        campaignTrail_temp.candidate_json[1]["fields"].image_url = "https://preview.redd.it/candidate-reveal-2024-arnold-amendment-democratic-primaries-v0-9lohmm01efsd1.png?width=640&crop=smart&auto=webp&s=4bc651e3a78dd4d6c127e9122187bd7a475467b8";
-campaignTrail_temp.running_mate_state_id = '187';
-campaignTrail_temp.running_mate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Sen_Chris_Murphy_in_2023.jpg';
-campaignTrail_temp.running_mate_last_name = 'Murphy';
-         campaignTrail_temp.question_number = 24;
+        campaignTrail_temp.question_number = 24;
     }
     if(ans == 3316 || ans == 3317){
         campaignTrail_temp.candidate_image_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Andy_Beshear_2024_%28cropped%29.jpg/330px-Andy_Beshear_2024_%28cropped%29.jpg';
